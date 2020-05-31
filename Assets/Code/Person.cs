@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class Person : MonoBehaviour {
 
+    public PersonData Data;
+
     [HideInInspector] public float Speed;
-    [HideInInspector] public Vector2 Dir;
+    [HideInInspector] public Vector3 Dir;
 
     private SpriteRenderer spriteRenderer;
     private Transform transf;
 
-    private Vector2 startPosition;
+    private Vector3 startPosition;
 
     public void Init (PersonData data) {
         startPosition = transf.position;
         startPosition.x = Mathf.Abs (startPosition.x);
+
+        //        for (int i = 0; i < data.Parametrs.Length; i++) {
+        //            Data = data;
+        //        }
+
     }
 
     private void Awake () {
