@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI
+    uniqueID: 2610802347
+    locked: 0
+  - name: Comics
+    uniqueID: 2978134053
+    locked: 0
