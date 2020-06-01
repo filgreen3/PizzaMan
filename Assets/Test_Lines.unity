@@ -157,7 +157,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -297,8 +297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  Rect: {x: 13, y: 4}
+  RectMain: {x: 13, y: 4}
+  RectExtra: {x: 9, y: 4}
   Offset: {x: 0, y: 1.3}
+  spriteRenderer: {fileID: 5704892177631285458}
   transf: {fileID: 8016594202617354774}
 --- !u!212 &5704892177631285458
 SpriteRenderer:
