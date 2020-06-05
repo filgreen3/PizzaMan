@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Person : MonoBehaviour {
 
-    public PersonData Data;
+    public PersonPreset Data;
+
+    [SerializeField] private DragonBones.UnityArmatureComponent Armature;
 
     [HideInInspector] public float Speed;
     [HideInInspector] public Vector3 Dir;
@@ -14,14 +17,21 @@ public class Person : MonoBehaviour {
 
     private Vector3 startPosition;
 
-    public void Init (PersonData data) {
+    public void Init (PersonPreset data) {
+        Data = PersonPreset.CopyPersonData (data);
         startPosition = transf.position;
         startPosition.x = Mathf.Abs (startPosition.x);
+        Armature._armature.flipX = (Dir.x > 0);
+        var transfBody = transf.GetChild (0);
 
-        //        for (int i = 0; i < data.Parametrs.Length; i++) {
-        //            Data = data;
-        //        }
-
+        for (int i = 0; i < transfBody.childCount; i++) {
+            transfBody.GetChild (i).gameObject.SetActive (false);
+        }
+        foreach (var item in Data.Parametrs) {
+            foreach (var id in item.CurrentData.NamesItem) {
+                transf.GetChild (0).Find (id).gameObject.SetActive (true);
+            }
+        }
     }
 
     private void Awake () {
@@ -35,4 +45,9 @@ public class Person : MonoBehaviour {
             Destroy (gameObject);
         }
     }
+
+    void OnMouseDown () {
+        PersonMatchManager.MatchPerson (this);
+    }
+
 }

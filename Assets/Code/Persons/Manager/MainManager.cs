@@ -5,8 +5,9 @@ using UnityEngine;
 public class MainManager : MonoBehaviour {
 
     public float TimeDelay;
-    [Range (0f, 1f)] public float Size;
-    [Range (0.0177f, 0.05f)] public float Speed;
+    [Range (0f, 10f)] public float SizeX, SizeY;
+    public Vector3 Offset;
+    [Range (0.0177f, 0.5f)] public float Speed;
 
     [SerializeField] private PersonFabric fabric;
 
@@ -18,14 +19,14 @@ public class MainManager : MonoBehaviour {
 
     private void Start () {
         line1 = new Vector3[] {
-            -Vector3.right * 10 * Size,
-            Vector3.up - Vector3.right * 10 * Size + Vector3.forward,
-            2 * Vector3.up - Vector3.right * 10 * Size + Vector3.forward * 2
+            -Vector3.right * 10 * SizeX + Offset,
+            Vector3.up * SizeY - Vector3.right * 10 * SizeX + Vector3.forward + Offset,
+            2 * Vector3.up * SizeY - Vector3.right * 10 * SizeX + Vector3.forward * 2 + Offset
         };
         line2 = new Vector3[] {
-            Vector3.right * 10 * Size,
-            Vector3.up + Vector3.right * 10 * Size + Vector3.forward,
-            2 * Vector3.up + Vector3.right * 10 * Size + Vector3.forward * 2
+            Vector3.right * 10 * SizeX + Offset,
+            Vector3.up * SizeY + Vector3.right * 10 * SizeX + Vector3.forward + Offset,
+            2 * Vector3.up * SizeY + Vector3.right * 10 * SizeX + Vector3.forward * 2 + Offset
         };
 
         struction = new PositionStruction (line1, line2);
