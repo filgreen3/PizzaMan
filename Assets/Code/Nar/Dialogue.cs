@@ -21,10 +21,12 @@ public class Dialogue : MonoBehaviour
     public void Close(GameObject go)
     {
         go.SetActive(true);
+        Time.timeScale = 1;
         gameObject.SetActive(false);
     }
     private void OnEnable()
     {
+        Time.timeScale = 0;
         stage = -1;
         Dia();
     }
@@ -70,11 +72,11 @@ public class Dialogue : MonoBehaviour
         }
         if (move)
         {
-            if (dialogue[stage].PlayerReply) Char1.transform.localScale=Vector2.Lerp(Char1.transform.localScale, new Vector2(0.5f, 0.5f), Time.deltaTime * 10);
-            else Char2.transform.localScale = Vector2.Lerp(Char2.transform.localScale, new Vector2(0.5f, 0.5f), Time.deltaTime * 10);
-            window.transform.position = Vector2.Lerp(window.transform.position, new Vector2 (window.transform.position.x,0), Time.deltaTime * 10);
+            if (dialogue[stage].PlayerReply) Char1.transform.localScale=Vector2.Lerp(Char1.transform.localScale, new Vector2(0.5f, 0.5f), Time.unscaledDeltaTime * 10);
+            else Char2.transform.localScale = Vector2.Lerp(Char2.transform.localScale, new Vector2(0.5f, 0.5f), Time.unscaledDeltaTime * 10);
+            window.transform.position = Vector2.Lerp(window.transform.position, new Vector2 (window.transform.position.x,0), Time.unscaledDeltaTime * 10);
             window.color = Color.Lerp(new Color(1, 1, 1, 0), Color.white, t);
-            t += Time.deltaTime / 0.5f;
+            t += Time.unscaledDeltaTime / 0.5f;
             if (window.transform.position == Vector3.zero) move = false;
         }
     }
@@ -85,19 +87,20 @@ public class Dialogue : MonoBehaviour
         foreach (char c in dialogue[stage].story)
         {
             txt.text += c;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
+        //audio.Stop();
     }
 }
     [Serializable]
     public class MonsterArray
     {
-        public string story;
-        public bool PlayerReply;
-        public bool exit=false;
-        public AudioClip sound;
+    [TextArea]
+    public string story;
+    public bool PlayerReply;
+    public bool exit=false;
+    public AudioClip sound;
     public Sprite sprite1;
     public Sprite sprite2;
     public Vector2 scale;
-
     }
