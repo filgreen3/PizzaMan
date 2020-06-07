@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2457855142152440423}
   - component: {fileID: 9165812498083814285}
   - component: {fileID: 1781120795748941042}
+  - component: {fileID: 3178336865132140093}
   m_Layer: 0
   m_Name: GG
   m_TagString: Untagged
@@ -211,3 +212,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9348a20e94354842bdbfe6c0e1613e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3178336865132140093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457855142152440440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b588a327aa9c1547a87280adc42b92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  RectMain: {x: 92.58, y: 25}
+  RectExtra: {x: 42.5, y: 25}
+  Offset: {x: 0, y: -10}
+  spriteRenderer: {fileID: 0}
+  transf: {fileID: 0}
