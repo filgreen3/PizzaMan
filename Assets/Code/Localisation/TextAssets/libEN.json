@@ -9,7 +9,7 @@
 { "key":"6", "value":"EXIT"},
 { "key":"7", "value":"SOUND"},
 { "key":"8", "value":"MUSIC"},
-{ "key":"9", "value":"LANGUAGE"},
+{ "key":"9", "value":"LANGUAGE (RELOAD NEEDED)"},
 { "key":"10", "value":"NINJA MODE"},
 { "key":"11", "value":"RETURN"},
 { "key":"12", "value":"CONTINUE"},
@@ -35,7 +35,7 @@
 { "key":"32", "value":"YOUR SCREW-UPS"},
 { "key":"33", "value":"MOVEMENT"},
 { "key":"34", "value":"HAND OUT A FLYER"},
-{ "key":"35", "value":"HAND OUT A SPECIAL FLYER"},
+{ "key":"35", "value":"HAND OUT A <SPECIAL> FLYER"},
 { "key":"36", "value":"RETURN"},
 { "key":"37", "value":"SKIP"},
 { "key":"38", "value":"Hi, kid. You’re late at the very first day."},
@@ -44,13 +44,9 @@
 { "key":"41", "value":"Well, it’s kinda tight from the bottom and it smells."},
 { "key":"42", "value":"It’s fine!"},
 { "key":"43", "value":"And I found a tooth and some nails, is that alright?"},
-{ "key":"44", "value":""Alright, alright. You don’t wanna know what I’d found in my pizza.
-Anyway, let’s sum up, now you work for me and you do everything I say.""},
-{ "key":"45", "value":""You are to hand out flyers and to attract customers. I’ll give you a limited number of flyers a day.
-According to my experience, a special kind of people will buy it and come.""},
-{ "key":"46", "value":""You’ll see who you should flog it. And don’t worry; you’ll HEAR if something changes.
-So don’t waste your flyers on a wrong person.
-3 mistakes and you’re fired. And don’t be a bum, hand them ALL out before the pizzeria closes.""},
+{ "key":"44", "value":"Alright, alright. You don’t wanna know what I’d found in my pizza. Anyway, let’s sum up, now you work for me and you do everything I say."},
+{ "key":"45", "value":"You are to hand out flyers and to attract customers. I’ll give you a limited number of flyers a day. According to my experience, a special kind of people will buy it and come."},
+{ "key":"46", "value":"You’ll see who you should flog it. And don’t worry; you’ll HEAR if something changes. So don’t waste your flyers on a wrong person. 3 mistakes and you’re fired. And don’t be a bum, hand them ALL out before the pizzeria closes."},
 { "key":"47", "value":"Use the keys W, S, A, D to move! I didn't hire you to be wallflowers!"},
 { "key":"48", "value":"Left-click on a passerby to give a flyer! Now try to give it to anybody."},
 { "key":"49", "value":"Excellent! You’ve learnt it all, now get to work. Don’t go too far at first."},
@@ -63,13 +59,11 @@ So don’t waste your flyers on a wrong person.
 { "key":"56", "value":"That’s awesome! So I finally get a normal suit?"},
 { "key":"57", "value":"You have one!"},
 { "key":"58", "value":"..."},
-{ "key":"59", "value":""Okay, listen, kid, now you’re a staff member and thus I will require in full from you.
-More flyers – more people, more people – more money, got it?""},
+{ "key":"59", "value":"Okay, listen, kid, now you’re a staff member and thus I will require in full from you. More flyers – more people, more people – more money, got it?"},
 { "key":"60", "value":"Which means a new suit?"},
 { "key":"61", "value":"Which means it’s up to you! Go back to work, kid. I’ve got a pizza burning over there."},
 { "key":"62", "value":"Yo, ‘sup?"},
-{ "key":"63", "value":""Hello. Kid. You’ve been doing your job really well last six month.
-I think bout getting you raise or maybe I shall buy you a new suit?""},
+{ "key":"63", "value":"Hello. Kid. You’ve been doing your job really well last six month. I think bout getting you raise or maybe I shall buy you a new suit?"},
 { "key":"64", "value":"Nah, mine is okey, I’m gettin’ along with a moth that lives inside, so I’d choose raise!"},
 { "key":"65", "value":"Hey, boy."},
 { "key":"66", "value":"Ps-s, dude!"},
@@ -80,8 +74,7 @@ I think bout getting you raise or maybe I shall buy you a new suit?""},
 { "key":"71", "value":"Are you kiddin’ me? Get outta here or I call the cops."},
 { "key":"72", "value":"Wait-wait. You got me wrong. I wanna offer you a little job with flyers."},
 { "key":"73", "value":"A little job, you say? Sounds dope, keep talkin’!"},
-{ "key":"74", "value":""Anyway, there’s a club and we do there something…
-and it’ll be great if you help us to attract some new people by handing out flyers, you know.""},
+{ "key":"74", "value":"Anyway, there’s a club and we do there something… and it’ll be great if you help us to attract some new people by handing out flyers, you know."},
 { "key":"75", "value":"A club of people doing something? Like seriously?"},
 { "key":"76", "value":"So what’s the problem? You do the job, we pay for it. What do you think?"},
 { "key":"77", "value":"Nah, man, sorry, I’m not lookin’ for troubles!"},
@@ -96,15 +89,13 @@ and it’ll be great if you help us to attract some new people by handing out fl
 { "key":"86", "value":"Hello. Kid. You’ve been doing your job really well last six month..."},
 { "key":"87", "value":"Wait, wait, wait, I do remember this, the raise or a new suit..."},
 { "key":"88", "value":"Then a weird guy, a club…"},
-{ "key":"89", "value":""You’d better quit playing videogames, kid. Who knows what they do to you!
-Anyway, you’ve been doing your job really well last six month.
-I think bout getting you raise or maybe I shall buy you a new suit?""},
+{ "key":"89", "value":"You’d better quit playing videogames, kid. Who knows what they do to you! Anyway, you’ve been doing your job really well last six month. I think bout getting you raise or maybe I shall buy you a new suit?"},
 { "key":"90", "value":"Damn, maybe the new suit would be better."},
 { "key":"91", "value":"Hand out flyers, huh?"},
 { "key":"92", "value":"Wha, no way, you again?!"},
 { "key":"93", "value":"You got the wrong guy, buddy."},
 { "key":"94", "value":"Buddy? I am not your buddy. What do you want?"},
-{ "key":"95", "value":""Anyway, there’s a club and we do there something… and it’ll be great if you help us to attract some new people by handing out flyers, you know.""},
+{ "key":"95", "value":"Anyway, there’s a club and we do there something… and it’ll be great if you help us to attract some new people by handing out flyers, you know."},
 { "key":"96", "value":"A club of people doing something.. haha, funny shit."},
 { "key":"97", "value":"So what’s the problem? You do the job, we pay for it. What do you think?"},
 { "key":"98", "value":"You know what, shove your something up your somewhere!"},
@@ -121,10 +112,7 @@ I think bout getting you raise or maybe I shall buy you a new suit?""},
 { "key":"109", "value":"What the hell, dude, who are you?"},
 { "key":"110", "value":"You know, you really did well to get to this moment..."},
 { "key":"111", "value":"You must be kidding me. What moment? What’s going on here? Is this some kind of show or game?"},
-{ "key":"112", "value":"This is the end. But if you wanna to play more, you can use the "endless mode"..."},
+{ "key":"112", "value":"This is the end. But if you wanna to play more, you can use <the endless mode>..."},
 { "key":"113", "value":"What? Wait, hey!"}
-
-		
-		
 	]
 }
