@@ -14,14 +14,16 @@ public class Dialogue : MonoBehaviour
     public SpriteRenderer Char2;
     public Image window;
     public GameObject Exit;
+
     bool move = false;
     float t = 0;
     public List<MonsterArray> dialogue;
 
     public void Close(GameObject go)
     {
-        go.SetActive(true);
+        if (go != null) go.SetActive(true);
         Time.timeScale = 1;
+
         gameObject.SetActive(false);
     }
     private void OnEnable()
@@ -45,21 +47,23 @@ public class Dialogue : MonoBehaviour
         if (dialogue[stage].PlayerReply)
         {
             Char1.transform.localScale = new Vector2(0.5f, 0.4f);
-            window.transform.position = new Vector2(-1, -2);
-            window.transform.localScale = new Vector2(-1, 1);
-            txt.transform.localScale = new Vector2(-1, 1);
+            window.transform.position = new Vector3(-1, -2);
+            //window.transform.localScale = new Vector3(-1, 1,1);
+            //txt.transform.localScale = new Vector2(-1, 1);
             audio.panStereo = -0.5f;
         }
         else
         {
             Char2.transform.localScale = new Vector2(0.5f, 0.4f);
             window.transform.position = new Vector2(1, -2);
-            window.transform.localScale = new Vector2(1, 1);
-            txt.transform.localScale = new Vector2(1, 1);
+            //window.transform.localScale = new Vector3(1, 1,1);
+            //txt.transform.localScale = new Vector2(1, 1);
             audio.panStereo = 0.5f;
 
         }
-        window.gameObject.GetComponent<RectTransform>().sizeDelta = dialogue[stage].scale;
+        string text = dialogue[stage].story;
+        window.gameObject.GetComponent<RectTransform>().sizeDelta = 
+            new Vector2(500,100+LocalizationManager.instance.GetLocalizetedValue(text).Length/25.0f*40);
 
     }
 
@@ -84,9 +88,12 @@ public class Dialogue : MonoBehaviour
     IEnumerator PlayText()
     {
         txt.text = "";
-        foreach (char c in dialogue[stage].story)
+        string text = dialogue[stage].story;
+
+        foreach (char c in LocalizationManager.instance.GetLocalizetedValue(dialogue[stage].story))
         {
             txt.text += c;
+
             yield return new WaitForSecondsRealtime(0.02f);
         }
         //audio.Stop();
@@ -98,9 +105,9 @@ public class Dialogue : MonoBehaviour
     [TextArea]
     public string story;
     public bool PlayerReply;
-    public bool exit=false;
+    //public bool exit=false;
     public AudioClip sound;
     public Sprite sprite1;
     public Sprite sprite2;
-    public Vector2 scale;
+    //public Vector2 scale;
     }
