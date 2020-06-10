@@ -110,16 +110,11 @@ namespace UIElementsExamples {
         private Vector2 m_MouseOffset;
 
         public DraggableLabel () {
-            //#define USE_MOUSE_EVENTS
-#if USE_MOUSE_EVENTS
+
             RegisterCallback<MouseDownEvent> (OnMouseDownEvent);
             RegisterCallback<MouseMoveEvent> (OnMouseMoveEvent);
             RegisterCallback<MouseUpEvent> (OnMouseUpEvent);
-#else
-            RegisterCallback<PointerDownEvent> (OnPointerDownEvent);
-            RegisterCallback<PointerMoveEvent> (OnPointerMoveEvent);
-            RegisterCallback<PointerUpEvent> (OnPointerUpEvent);
-#endif
+
         }
 
         void OnMouseDownEvent (MouseDownEvent e) {

@@ -1,0 +1,419 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74839bdd0e90e0946b54ad362e88de6a, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  PersonTransform: {fileID: 8219879123905990555, guid: ff64797107238d54cb71a8d4526f7d60,
+    type: 3}
+  Elements:
+  - ItemName: rost
+    Active: 0
+  - ItemName: ten
+    Active: 0
+  - ItemName: l_hand
+    Active: 0
+  - ItemName: l_hand_black
+    Active: 0
+  - ItemName: l_rukav_1
+    Active: 0
+  - ItemName: l_rukav_10
+    Active: 0
+  - ItemName: l_rukav_11
+    Active: 0
+  - ItemName: l_rukav_12
+    Active: 0
+  - ItemName: l_rukav_13
+    Active: 0
+  - ItemName: l_rukav_14
+    Active: 0
+  - ItemName: l_rukav_15
+    Active: 0
+  - ItemName: l_rukav_16
+    Active: 0
+  - ItemName: l_rukav_17
+    Active: 0
+  - ItemName: l_rukav_18
+    Active: 0
+  - ItemName: l_rukav_3
+    Active: 0
+  - ItemName: l_rukav_4
+    Active: 0
+  - ItemName: l_rukav_5
+    Active: 0
+  - ItemName: l_rukav_6
+    Active: 0
+  - ItemName: l_rukav_7
+    Active: 0
+  - ItemName: l_rukav_8
+    Active: 0
+  - ItemName: l_rukav_9
+    Active: 0
+  - ItemName: foot_21
+    Active: 0
+  - ItemName: foot_11
+    Active: 0
+  - ItemName: leg down_tr_41
+    Active: 0
+  - ItemName: leg down_tr_21
+    Active: 0
+  - ItemName: leg down_black1
+    Active: 0
+  - ItemName: leg down1
+    Active: 0
+  - ItemName: leg down_tr_11
+    Active: 0
+  - ItemName: leg down_tr_31
+    Active: 0
+  - ItemName: leg up_4_black1
+    Active: 0
+  - ItemName: leg up_3_tr1
+    Active: 0
+  - ItemName: leg up_3_black1
+    Active: 0
+  - ItemName: leg up_2_tr1
+    Active: 0
+  - ItemName: leg up_21
+    Active: 0
+  - ItemName: leg up_1_black1
+    Active: 0
+  - ItemName: leg up_11
+    Active: 0
+  - ItemName: leg up_1_tr1
+    Active: 0
+  - ItemName: leg up_2_black1
+    Active: 0
+  - ItemName: leg up_31
+    Active: 0
+  - ItemName: leg up_3_tr-11
+    Active: 0
+  - ItemName: leg up_41
+    Active: 0
+  - ItemName: foot_1
+    Active: 0
+  - ItemName: foot_2
+    Active: 0
+  - ItemName: leg down
+    Active: 0
+  - ItemName: leg down_black
+    Active: 0
+  - ItemName: leg down_tr_1
+    Active: 0
+  - ItemName: leg down_tr_2
+    Active: 0
+  - ItemName: leg down_tr_3
+    Active: 0
+  - ItemName: leg down_tr_4
+    Active: 0
+  - ItemName: leg up_1
+    Active: 0
+  - ItemName: leg up_1_black
+    Active: 0
+  - ItemName: leg up_1_tr
+    Active: 0
+  - ItemName: leg up_2
+    Active: 0
+  - ItemName: leg up_2_black
+    Active: 0
+  - ItemName: leg up_2_tr
+    Active: 0
+  - ItemName: leg up_3
+    Active: 0
+  - ItemName: leg up_3_black
+    Active: 0
+  - ItemName: leg up_3_tr-1
+    Active: 0
+  - ItemName: leg up_3_tr
+    Active: 0
+  - ItemName: leg up_4
+    Active: 0
+  - ItemName: leg up_4_black
+    Active: 0
+  - ItemName: eye_bk
+    Active: 0
+  - ItemName: wear_bk_1
+    Active: 0
+  - ItemName: wear_bk_2
+    Active: 0
+  - ItemName: wear_bk_3
+    Active: 0
+  - ItemName: wear_bk_4
+    Active: 0
+  - ItemName: kofta_1_bk
+    Active: 0
+  - ItemName: kofta_3_bk
+    Active: 0
+  - ItemName: kofta_2_bk
+    Active: 0
+  - ItemName: kofta_4_bk
+    Active: 0
+  - ItemName: kofta_5_bk
+    Active: 0
+  - ItemName: kofta_6_bk
+    Active: 0
+  - ItemName: sharf_bk
+    Active: 0
+  - ItemName: l_yxo
+    Active: 0
+  - ItemName: l_yxo_black
+    Active: 0
+  - ItemName: body
+    Active: 0
+  - ItemName: body_black
+    Active: 0
+  - ItemName: shtani_4
+    Active: 0
+  - ItemName: shtani_1
+    Active: 0
+  - ItemName: shtani_2
+    Active: 0
+  - ItemName: shtani_3
+    Active: 0
+  - ItemName: kofta_1
+    Active: 0
+  - ItemName: kofta_2
+    Active: 0
+  - ItemName: kofta_3
+    Active: 0
+  - ItemName: kofta_4
+    Active: 0
+  - ItemName: kofta_5
+    Active: 0
+  - ItemName: kofta_6
+    Active: 0
+  - ItemName: wear_1
+    Active: 0
+  - ItemName: wear_10
+    Active: 0
+  - ItemName: wear_11
+    Active: 0
+  - ItemName: wear_12
+    Active: 0
+  - ItemName: wear_13
+    Active: 0
+  - ItemName: wear_14
+    Active: 0
+  - ItemName: wear_15
+    Active: 0
+  - ItemName: wear_16
+    Active: 0
+  - ItemName: wear_17
+    Active: 0
+  - ItemName: wear_18
+    Active: 0
+  - ItemName: wear_19
+    Active: 0
+  - ItemName: wear_2
+    Active: 0
+  - ItemName: wear_20
+    Active: 0
+  - ItemName: wear_21
+    Active: 0
+  - ItemName: wear_22
+    Active: 0
+  - ItemName: wear_23
+    Active: 0
+  - ItemName: wear_24
+    Active: 0
+  - ItemName: wear_25
+    Active: 0
+  - ItemName: wear_26
+    Active: 0
+  - ItemName: wear_27
+    Active: 0
+  - ItemName: wear_28
+    Active: 0
+  - ItemName: wear_29
+    Active: 0
+  - ItemName: wear_3
+    Active: 0
+  - ItemName: wear_30
+    Active: 0
+  - ItemName: wear_4
+    Active: 0
+  - ItemName: wear_5
+    Active: 0
+  - ItemName: wear_6
+    Active: 0
+  - ItemName: wear_7
+    Active: 0
+  - ItemName: wear_8
+    Active: 0
+  - ItemName: wear_9
+    Active: 0
+  - ItemName: sumka_1
+    Active: 0
+  - ItemName: sumka_2
+    Active: 0
+  - ItemName: 'sharf '
+    Active: 0
+  - ItemName: hair_1
+    Active: 0
+  - ItemName: hair_10
+    Active: 0
+  - ItemName: hair_11
+    Active: 0
+  - ItemName: hair_12
+    Active: 0
+  - ItemName: hair_13
+    Active: 0
+  - ItemName: hair_14
+    Active: 0
+  - ItemName: hair_15
+    Active: 0
+  - ItemName: hair_16
+    Active: 0
+  - ItemName: hair_17
+    Active: 0
+  - ItemName: hair_18
+    Active: 0
+  - ItemName: hair_19
+    Active: 0
+  - ItemName: hair_2
+    Active: 0
+  - ItemName: hair_20
+    Active: 0
+  - ItemName: hair_21
+    Active: 0
+  - ItemName: hair_22
+    Active: 0
+  - ItemName: hair_23
+    Active: 0
+  - ItemName: hair_24
+    Active: 0
+  - ItemName: hair_3
+    Active: 0
+  - ItemName: hair_4
+    Active: 0
+  - ItemName: hair_5
+    Active: 0
+  - ItemName: hair_6
+    Active: 0
+  - ItemName: hair_7
+    Active: 0
+  - ItemName: hair_8
+    Active: 0
+  - ItemName: hair_9
+    Active: 0
+  - ItemName: borod_1
+    Active: 0
+  - ItemName: borod_10
+    Active: 0
+  - ItemName: borod_11
+    Active: 0
+  - ItemName: borod_12
+    Active: 0
+  - ItemName: borod_13
+    Active: 0
+  - ItemName: borod_14
+    Active: 0
+  - ItemName: borod_15
+    Active: 0
+  - ItemName: borod_16
+    Active: 0
+  - ItemName: borod_17
+    Active: 0
+  - ItemName: borod_18
+    Active: 0
+  - ItemName: borod_19
+    Active: 0
+  - ItemName: borod_2
+    Active: 0
+  - ItemName: borod_20
+    Active: 0
+  - ItemName: borod_21
+    Active: 0
+  - ItemName: borod_22
+    Active: 0
+  - ItemName: borod_23
+    Active: 0
+  - ItemName: borod_24
+    Active: 0
+  - ItemName: borod_3
+    Active: 0
+  - ItemName: borod_4
+    Active: 0
+  - ItemName: borod_5
+    Active: 0
+  - ItemName: borod_6
+    Active: 0
+  - ItemName: borod_7
+    Active: 0
+  - ItemName: borod_8
+    Active: 0
+  - ItemName: borod_9
+    Active: 0
+  - ItemName: nose
+    Active: 0
+  - ItemName: r_hand
+    Active: 0
+  - ItemName: r_hand_black
+    Active: 0
+  - ItemName: r_rukav_1
+    Active: 0
+  - ItemName: r_rukav_10
+    Active: 0
+  - ItemName: r_rukav_11
+    Active: 0
+  - ItemName: r_rukav_12
+    Active: 0
+  - ItemName: r_rukav_13
+    Active: 0
+  - ItemName: r_rukav_14
+    Active: 0
+  - ItemName: r_rukav_15
+    Active: 0
+  - ItemName: r_rukav_16
+    Active: 0
+  - ItemName: r_rukav_18
+    Active: 0
+  - ItemName: r_rukav_2
+    Active: 0
+  - ItemName: r_rukav_3
+    Active: 0
+  - ItemName: r_rukav_4
+    Active: 0
+  - ItemName: r_rukav_5
+    Active: 0
+  - ItemName: r_rukav_6
+    Active: 0
+  - ItemName: r_rukav_7
+    Active: 0
+  - ItemName: r_rukav_8
+    Active: 0
+  - ItemName: r_rukav_9
+    Active: 0
+  - ItemName: shapka
+    Active: 0
+  - ItemName: eye_1
+    Active: 0
+  - ItemName: eye_2
+    Active: 0
+  - ItemName: eye_3
+    Active: 0
+  - ItemName: eye_4
+    Active: 0
+  - ItemName: r_yxo
+    Active: 0
+  - ItemName: l_rukav_2
+    Active: 0
+  - ItemName: brovi_1
+    Active: 0
+  - ItemName: brovi_2
+    Active: 0
+  - ItemName: brovi_3
+    Active: 0
+  - ItemName: brovi_4
+    Active: 0
+  - ItemName: beret
+    Active: 0
+  - ItemName: kepka
+    Active: 0

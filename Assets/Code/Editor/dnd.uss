@@ -1,20 +1,33 @@
 .droparea {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 50px;
-    right: 50px;
-    background-color: azure;
+    top: 40px;
+    left: 240px;
+    bottom: 0px;
+    right: 0px;
+    background-color: gainsboro;
     border-width: 5px;
-    border-color: azure;
+    border-color: gainsboro;
+}
+
+.area {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    bottom: 0px;
+    right: 0;
+    width:235px;
+    background-color: silver;
+    border-width: 5px;
+    border-color: gainsboro;
 }
 
 .droparea:hover {
-    background-color: cornsilk;
+    background-color: lightgray;
 }
 
+
 Label {
-    color: darkslategray;
+    color: black;
     -unity-text-align: upper-center;
 }
 
@@ -25,11 +38,13 @@ Label {
 
 .box {
     position: absolute;
-    width: 64px;
-    height: 64px;
-    background-color: darkblue;
+    width: 128px;
+    height: 32px;
+    background-color: grey;
     color: antiquewhite;
     white-space: normal;
     border-width: 1px;
     border-color: orange;
 }
+
+

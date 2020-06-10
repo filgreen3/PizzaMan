@@ -28,9 +28,7 @@ public class Person : MonoBehaviour {
             transfBody.GetChild (i).gameObject.SetActive (false);
         }
         foreach (var item in Data.Parametrs) {
-            foreach (var id in item.CurrentData.NamesItem) {
-                transf.GetChild (0).Find (id).gameObject.SetActive (true);
-            }
+            transf.GetChild (0).Find (item.CurrentData.NamesItem).gameObject.SetActive (true);
         }
     }
 
