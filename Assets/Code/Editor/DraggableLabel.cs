@@ -26,7 +26,6 @@ public class DraggableLabel : Label {
 
         textBox = new VisualElement ();
         this.Add (textBox);
-
     }
 
     private void UpdataData (PersonParametr data) {
@@ -36,7 +35,7 @@ public class DraggableLabel : Label {
         if (data != null) {
             var list = data.datas;
             for (int i = 0; i < list.Count; i++) {
-                var lable = new Label (list[i].NamesItem);
+                var lable = new Label (list[i].EntitiesNames[0]);
                 textBox.Add (lable);
             }
         }

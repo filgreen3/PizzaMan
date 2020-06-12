@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d58c52efc760f54d98b2e2b3a376782, type: 3}
   m_Name: hair_24
   m_EditorClassIdentifier: 
+  lastIndex: 0
   Icon: {fileID: 0}
-  NamesItem: hair_24
+  NamesItem:
+  - hair_24

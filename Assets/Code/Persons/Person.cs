@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Person : MonoBehaviour {
 
-    public PersonPreset Data;
+    public IPersonVisual Data;
 
     [SerializeField] private DragonBones.UnityArmatureComponent Armature;
 
@@ -17,19 +17,13 @@ public class Person : MonoBehaviour {
 
     private Vector3 startPosition;
 
-    public void Init (PersonPreset data) {
-        Data = PersonPreset.CopyPersonData (data);
+    public void Init (IPersonVisual data) {
+        Data = data;
         startPosition = transf.position;
         startPosition.x = Mathf.Abs (startPosition.x);
         Armature._armature.flipX = (Dir.x > 0);
-        var transfBody = transf.GetChild (0);
 
-        for (int i = 0; i < transfBody.childCount; i++) {
-            transfBody.GetChild (i).gameObject.SetActive (false);
-        }
-        foreach (var item in Data.Parametrs) {
-            transf.GetChild (0).Find (item.CurrentData.NamesItem).gameObject.SetActive (true);
-        }
+        data.SettingPerson (this);
     }
 
     private void Awake () {

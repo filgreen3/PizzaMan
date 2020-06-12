@@ -1,38 +1,31 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 [CreateAssetMenu (fileName = "Data", menuName = "ScriptableObjects/PersonParametr", order = 1)]
-public class PersonParametr : ScriptableObject {
-    public string keyWord;
-    public DataEntity CurrentData;
-    public List<DataEntity> datas = new List<DataEntity> ();
+public class PersonParametr : DataEntityGiver {
 
-    [SerializeField] private bool Origin;
+    public PersonParametr linkedParametr;
+    public List<DataEntityGiver> datas = new List<DataEntityGiver> ();
 
-    public PersonParametr CreateWorkCopy () {
+    public override int EntitiesCount =>
+        datas.Sum ((data) => data.EntitiesCount);
 
-        if (!Origin) {
-            Debug.LogError ("Try to create copy not from origin");
-            return null;
+    public override string[] EntitiesNames =>
+        datas.SelectMany (item => item.EntitiesNames).Distinct ().ToArray ();
+
+    public override DataEntity GetEntity (out int index) {
+        if (linkedParametr == null) {
+            var entityGiver = IEnumerableExtensions.RandomElementByWeight<DataEntityGiver> (datas, item => (float) item.EntitiesCount);
+            index = datas.IndexOf (entityGiver);
+            lastIndex = index;
+            return entityGiver.GetEntity ();
+        } else {
+            index = linkedParametr.lastIndex;
+            return datas[index].GetEntity ();
         }
-
-        if (datas.Count == 0) {
-            Debug.LogError ("Try to create copy from empty datastorage");
-            return null;
-        }
-
-        var instance = CreateInstance<PersonParametr> ();
-        instance.CurrentData = this.datas[Random.Range (0, datas.Count)];
-        instance.keyWord = keyWord;
-        return instance;
-    }
-
-    public bool ContainData (string nameData) {
-        foreach (var item in datas) {
-            if (item.NamesItem == nameData)
-                return true;
-        }
-        return false;
     }
 }
