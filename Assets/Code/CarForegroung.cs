@@ -29,7 +29,7 @@ public class CarForegroung : MonoBehaviour
             t++;
             if (t > waitfor)
             {
-                transform.position = new Vector2(-30, -3.15f);
+                transform.position = new Vector2(-30, -3.2f);
                 t = 0;
                 waiting = false;
                 GetComponent<AudioSource>().Play();

@@ -21,7 +21,10 @@ public class LocalizationManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        
+
+
+
+
         if (Application.systemLanguage == SystemLanguage.Russian)
         {
             LoadLocalizatedText(libRU);
@@ -30,6 +33,8 @@ public class LocalizationManager : MonoBehaviour
         {
             LoadLocalizatedText(libEN);
         }
+        if (PlayerPrefs.GetString("Language") == "Russian") LoadLocalizatedText(libRU);
+        if (PlayerPrefs.GetString("Language") == "English") LoadLocalizatedText(libEN);
     }
 
 
