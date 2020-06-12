@@ -28,14 +28,16 @@ public class LocalizationManager : MonoBehaviour
         if (Application.systemLanguage == SystemLanguage.Russian)
         {
             LoadLocalizatedText(libRU);
+            //PlayerPrefs.SetString("Language", "Russian");
         }
         else
         {
             LoadLocalizatedText(libEN);
+            //PlayerPrefs.SetString("Language", "English");
         }
         if (PlayerPrefs.GetString("Language") == "Russian") LoadLocalizatedText(libRU);
-        if (PlayerPrefs.GetString("Language") == "English") LoadLocalizatedText(libEN);
-    }
+        else LoadLocalizatedText(libEN);
+            }
 
 
 
@@ -50,7 +52,7 @@ public class LocalizationManager : MonoBehaviour
         return result;
     }
 
-    void LoadLocalizatedText(TextAsset lib)
+    public void LoadLocalizatedText(TextAsset lib)
     {
         localizedText = new Dictionary<string, string>();
         string dataAsJson = lib.ToString();

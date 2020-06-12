@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MenuIngame : MonoBehaviour
 {
     public GameObject PauseMenu;
+    public Toggle Sounds;
+    public Toggle Musics;
     public GameObject PauseMenuMain;
     public GameObject[] PauseMenuall;
     public GameObject MainMenu;
@@ -34,7 +39,36 @@ public class MenuIngame : MonoBehaviour
     {
         fader.gameObject.SetActive(true);
         fader.next = 1;
-
+    }    
+    public void Music(AudioMixer audio)
+    {
+        if (PlayerPrefs.GetFloat("Music") == 0) { audio.SetFloat("Music", -80); PlayerPrefs.SetFloat("Music", 1); }
+        else { audio.SetFloat("Music", 0); PlayerPrefs.SetFloat("Music",0); }
+    }    
+    public void Sound()
+    {
+        if (PlayerPrefs.GetFloat("Sound") != 0)
+        {
+            AudioListener.pause = false; PlayerPrefs.SetFloat("Sound", 0);
+        }
+        else
+        {
+            AudioListener.pause = true;
+            PlayerPrefs.SetFloat("Sound", 1);
+        }
+    }    
+    public void Lang()
+    {
+        if (PlayerPrefs.GetString("Language") == "Russian") PlayerPrefs.SetString("Language", "English");
+        else PlayerPrefs.SetString("Language", "Russian");
+        if (PlayerPrefs.GetString("Language") == null)
+        {
+            if (Application.systemLanguage == SystemLanguage.Russian) PlayerPrefs.SetString("Language", "English");
+            else PlayerPrefs.SetString("Language", "Russian");
+        }
+        if (PlayerPrefs.GetString("Language") == "Russian") LocalizationManager.instance.LoadLocalizatedText(LocalizationManager.instance.libRU);
+        else LocalizationManager.instance.LoadLocalizatedText(LocalizationManager.instance.libEN);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }    
     public void Menu()
     {
@@ -44,7 +78,10 @@ public class MenuIngame : MonoBehaviour
     }
     private void Start()
     {
+        
         Application.targetFrameRate = 60;
+        if (PlayerPrefs.GetFloat("Music") != 0) Musics.isOn = false;
+        if (PlayerPrefs.GetFloat("Sound") != 0) Sounds.isOn = false;
     }
     void Update()
     {

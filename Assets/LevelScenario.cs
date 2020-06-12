@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelScenario : MonoBehaviour
 {
     public GameObject Dialogue1; 
+    public int time=1; 
     void Start()
     {
         StartCoroutine("StartDialogue");
@@ -12,7 +13,7 @@ public class LevelScenario : MonoBehaviour
 
 IEnumerator StartDialogue()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         Dialogue1.SetActive(true);
     }
 }

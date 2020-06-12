@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f765a777483ba864483f9be92962649e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: 0
+  next: 1
 --- !u!1 &1510749047
 GameObject:
   m_ObjectHideFlags: 0
@@ -9406,8 +9406,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 5976017209515889338}
-        m_MethodName: Exit
+      - m_Target: {fileID: 9088214128360907188}
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16851,6 +16851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 7004447424609791660}
+  Sounds: {fileID: 0}
+  Musics: {fileID: 0}
   PauseMenuMain: {fileID: 5976017209510551372}
   PauseMenuall:
   - {fileID: 5976017209510392804}

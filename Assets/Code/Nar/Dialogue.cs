@@ -64,6 +64,7 @@ public class Dialogue : MonoBehaviour
             audio.panStereo = 0.5f;
         }
         string text = dialogue[stage].story;
+        for (int i = 0; i < dialogue[stage].Activate.Length; i++) dialogue[stage].Activate[i].SetActive(true);
         window.gameObject.GetComponent<RectTransform>().sizeDelta = 
             new Vector2(500,100+LocalizationManager.instance.GetLocalizetedValue(text).Length/25.0f*40);
     }
@@ -108,5 +109,6 @@ public class Dialogue : MonoBehaviour
     public AudioClip sound;
     public Sprite sprite1;
     public Sprite sprite2;
+    public GameObject[] Activate;
     //public Vector2 scale;
     }
