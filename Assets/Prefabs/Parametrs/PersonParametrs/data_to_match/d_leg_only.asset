@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: d_leg_only
   m_EditorClassIdentifier: 
   lastIndex: 0
-  linkedParametr: {fileID: 11400000, guid: db805b495e8b4e34881e6c48a5ee04d0, type: 2}
+  linkedParametr: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: b428909dc142afe45a4d2ce2bec92421, type: 2}
   - {fileID: 11400000, guid: a26301e751a30064ba902509415bffea, type: 2}

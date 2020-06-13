@@ -6,7 +6,7 @@ public class MainManager : MonoBehaviour {
 
     public int PeopleCount;
 
-    [Range (0f, 30f)] public float SizeX;
+    [Range (0f, 60f)] public float SizeX;
     [Range (0.0177f, 0.5f)] public float Speed;
 
     [Range (-10f, 10f)] public float mainLine;
