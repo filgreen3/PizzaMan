@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: body
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 59c1e011860342244928ab17ffc32358, type: 3}
   NamesItem:
   - BODY
   - r_hand
