@@ -9,7 +9,7 @@ public class MainManager : MonoBehaviour {
     [Range (0f, 30f)] public float SizeX;
     [Range (0.0177f, 0.5f)] public float Speed;
 
-    [Range (-3f, 3f)] public float mainLine;
+    [Range (-10f, 10f)] public float mainLine;
     [Range (0f, 3f)] public float delta;
 
     [SerializeField] private PersonFabric fabric;

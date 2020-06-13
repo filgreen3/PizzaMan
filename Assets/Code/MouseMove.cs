@@ -12,7 +12,6 @@ public class MouseMove : MonoBehaviour {
     private void Awake () {
         transf = transform;
         cameraMain = Camera.main;
-
     }
 
     private void FixedUpdate () {
@@ -32,7 +31,7 @@ public class MouseMove : MonoBehaviour {
     void OnDrawGizmos () {
         if (transf) {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere (transf.position, 1f);
+            Gizmos.DrawWireSphere (transf.position, 2f);
         }
     }
 }

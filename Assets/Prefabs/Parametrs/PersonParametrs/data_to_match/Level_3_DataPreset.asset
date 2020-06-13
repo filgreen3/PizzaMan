@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IncludeParametr: {fileID: 0}
   Parametrs:
-  - {fileID: 11400000, guid: 8c965484ae2fc5e46a156751594a397f, type: 2}
+  - {fileID: 11400000, guid: db805b495e8b4e34881e6c48a5ee04d0, type: 2}
+  - {fileID: 11400000, guid: 0f68b6650a6105046bacd8ae3fcfcc60, type: 2}
+  - {fileID: 11400000, guid: fc2a22b42c71b1340b920a7deae098c3, type: 2}

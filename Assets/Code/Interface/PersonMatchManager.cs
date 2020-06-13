@@ -53,14 +53,14 @@ public class PersonMatchManager : MonoBehaviour {
     public void UpdateMatcher (bool isGood) {
         if (isGood) {
             instance.MatchPasportGood = instance.MatchData.GetDataPasport ();
-            for (int i = 0; i < scoreManager.GoodParamsCount; i++) {
+            for (int i = 0; i < Mathf.Min (scoreManager.GoodParamsCount, MatchPasportGood.Elements.Count); i++) {
                 scoreManager.ImageCriteria[i].gameObject.SetActive (true);
                 scoreManager.ImageCriteria[i].transform.GetChild (0).GetComponent<Image> ().sprite =
                     MatchPasportGood.Elements[i].Icon;
             }
         } else {
             instance.MatchPasportBad = instance.MatchData.GetDataPasport ();
-            for (int i = 0; i < scoreManager.BadParamsCount; i++) {
+            for (int i = 0; i < Mathf.Min (scoreManager.BadParamsCount, MatchPasportBad.Elements.Count); i++) {
                 scoreManager.ImageCriteria[i + 3].gameObject.SetActive (true);
                 scoreManager.ImageCriteria[i + 3].transform.GetChild (0).GetComponent<Image> ().sprite =
                     MatchPasportBad.Elements[i].Icon;
@@ -74,7 +74,7 @@ public class PersonMatchManager : MonoBehaviour {
         var list = instance.PersonTransforms.
         Where (item => {
             dist = (item.transform.position - instance.playerMouse.position);
-            return dist.magnitude < 1f;
+            return dist.magnitude < 2f;
         }).ToArray ();
 
         Debug.Log (list.Length);
