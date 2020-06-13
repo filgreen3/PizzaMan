@@ -17,6 +17,7 @@ public class PersonMatchManager : MonoBehaviour {
         MatchData.SortParametrs ();
         MatchPasport = MatchData.GetDataPasport ();
 
+        sorceManager.ImageCriteria[0].gameObject.SetActive (true);
         sorceManager.ImageCriteria[0].transform.GetChild (0).GetComponent<Image> ().sprite =
             MatchPasport.Elements[0].Icon;
     }
