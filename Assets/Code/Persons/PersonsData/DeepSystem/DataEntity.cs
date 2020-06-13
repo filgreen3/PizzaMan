@@ -21,6 +21,7 @@ public class DataEntity : DataEntityGiver {
     public override int EntitiesCount => 1;
     public override string[] EntitiesNames => NamesItem;
 
+
     public override DataEntity GetEntity (out int index) {
         index = 0;
         return this;

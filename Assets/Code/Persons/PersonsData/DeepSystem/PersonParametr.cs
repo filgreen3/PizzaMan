@@ -19,7 +19,8 @@ public class PersonParametr : DataEntityGiver {
 
     public override DataEntity GetEntity (out int index) {
         if (linkedParametr == null) {
-            var entityGiver = IEnumerableExtensions.RandomElementByWeight<DataEntityGiver> (datas, item => (float) item.EntitiesCount);
+            DataEntityGiver entityGiver = null;
+            entityGiver = IEnumerableExtensions.RandomElementByWeight<DataEntityGiver> (datas, item => (float) item.EntitiesCount);
             index = datas.IndexOf (entityGiver);
             lastIndex = index;
             return entityGiver.GetEntity ();
@@ -28,4 +29,5 @@ public class PersonParametr : DataEntityGiver {
             return datas[index].GetEntity ();
         }
     }
+
 }

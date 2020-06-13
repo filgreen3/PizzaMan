@@ -26,7 +26,13 @@ public class Person : MonoBehaviour {
         Data = preset.GetDataPasport ();
         startPosition = transf.position;
         startPosition.x = Mathf.Abs (startPosition.x);
+
         Armature._armature.flipX = Dir.x > 0;
+        Speed = (Random.value + 0.3f) * 0.05f;
+        Armature.animation.timeScale = 1f;
+
+        var y = ((Random.value - 0.5f) * delta + mainLine);
+        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y;
 
         Data.SettingPerson (this);
     }
@@ -44,16 +50,7 @@ public class Person : MonoBehaviour {
     }
 
     private void EndLine () {
-        Init ();
         Dir.x = -Dir.x;
-        Armature._armature.flipX = Dir.x > 0;
-        Speed = (Random.value + 0.3f) * 0.05f;
-        var y = ((Random.value - 0.5f) * delta + mainLine);
-        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y;
+        Init ();
     }
-
-    void OnMouseDown () {
-        PersonMatchManager.MatchPerson (this);
-    }
-
 }

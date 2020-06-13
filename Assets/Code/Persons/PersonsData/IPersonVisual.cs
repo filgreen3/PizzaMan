@@ -11,6 +11,7 @@ public interface IPersonVisual {
 
 [System.Serializable]
 public abstract class DataEntityGiver : ScriptableObject {
+
     public abstract int EntitiesCount { get; }
     public abstract string[] EntitiesNames { get; }
 

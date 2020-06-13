@@ -28,4 +28,11 @@ public class MouseMove : MonoBehaviour {
         transf.localPosition = point;
 
     }
+
+    void OnDrawGizmos () {
+        if (transf) {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere (transf.position, 1f);
+        }
+    }
 }
