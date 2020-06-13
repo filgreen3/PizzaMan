@@ -17,7 +17,7 @@ public class PersonFabric : MonoBehaviour {
         var id = Random.Range (0, PersonPrefab.Length);
         var person = Instantiate (PersonPrefab[id], position, Quaternion.identity);
         person.Dir = Vector2.right * -Mathf.Sign (Random.value - 0.5f);
-        person.Init (Preset[id].GetDataPasport ());
+        person.preset = Preset[id];
         return person;
     }
 }
