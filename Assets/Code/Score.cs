@@ -35,9 +35,11 @@ public class Score : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         TimeLine.localScale = new Vector3 (time / StartTime, 1, 1);
+        ScoreGood.text = FlyersGood.ToString();
+        ScoreBad.text = FlyersBad.ToString();
         time -= Time.fixedDeltaTime;
-        if (lossesGood > 0) PenaltyGood[lossesGood - 1].SetActive (true);
-        if (lossesBad > 0) PenaltyBad[lossesBad - 1].SetActive (true);
+        if (lossesGood > 0&& lossesGood < 4) PenaltyGood[lossesGood - 1].SetActive (true);
+        if (lossesBad > 0&& lossesBad < 4) PenaltyBad[lossesBad - 1].SetActive (true);
         if (lossesGood > 2 || time < 0) FiredBoss.SetActive (true);
         if (lossesBad > 2 || time < 0) FiredBad.SetActive (true);
         if (FlyersGood == 0 && FlyersBad == 0) {

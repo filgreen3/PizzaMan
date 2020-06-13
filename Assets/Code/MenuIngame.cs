@@ -68,6 +68,7 @@ public class MenuIngame : MonoBehaviour
         }
         if (PlayerPrefs.GetString("Language") == "Russian") LocalizationManager.instance.LoadLocalizatedText(LocalizationManager.instance.libRU);
         else LocalizationManager.instance.LoadLocalizatedText(LocalizationManager.instance.libEN);
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }    
     public void Menu()

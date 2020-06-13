@@ -10734,8 +10734,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 5976017209515889338}
-        m_MethodName: 
+      - m_Target: {fileID: 9088214128360907188}
+        m_MethodName: Lang
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11117,6 +11117,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: dc5be3ac91ba4bb48b48191c0fdd4971,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9088214128360907188}
+        m_MethodName: Sound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11630,6 +11641,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: dc5be3ac91ba4bb48b48191c0fdd4971,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9088214128360907188}
+        m_MethodName: Music
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 24100000, guid: 32180efb15203624ba32471de9af5e03,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Audio.AudioMixer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16851,8 +16874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 7004447424609791660}
-  Sounds: {fileID: 0}
-  Musics: {fileID: 0}
+  Sounds: {fileID: 7004447423840323399}
+  Musics: {fileID: 7004447424516335700}
   PauseMenuMain: {fileID: 5976017209510551372}
   PauseMenuall:
   - {fileID: 5976017209510392804}
