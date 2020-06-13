@@ -8,8 +8,7 @@ public class PersonMatchManager : MonoBehaviour {
     [SerializeField] private PersonPreset MatchData;
     [SerializeField] private DataPasport MatchPasport;
 
-    [SerializeField] private Transform MatchShowBar;
-    [SerializeField] private Transform MatchShowElement;
+    [SerializeField] private Score sorceManager;
 
     public static PersonMatchManager instance;
 
@@ -18,8 +17,7 @@ public class PersonMatchManager : MonoBehaviour {
         MatchData.SortParametrs ();
         MatchPasport = MatchData.GetDataPasport ();
 
-        var data = Instantiate (MatchShowElement, MatchShowBar);
-        data.GetChild (0).GetComponent<Image> ().sprite =
+        sorceManager.ImageCriteria[0].transform.GetChild (0).GetComponent<Image> ().sprite =
             MatchPasport.Elements[0].Icon;
     }
 

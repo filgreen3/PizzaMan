@@ -22,7 +22,6 @@ public class PersonParametr : DataEntityGiver {
             var entityGiver = IEnumerableExtensions.RandomElementByWeight<DataEntityGiver> (datas, item => (float) item.EntitiesCount);
             index = datas.IndexOf (entityGiver);
             lastIndex = index;
-            //            Debug.Log (entityGiver);
             return entityGiver.GetEntity ();
         } else {
             index = linkedParametr.lastIndex;
