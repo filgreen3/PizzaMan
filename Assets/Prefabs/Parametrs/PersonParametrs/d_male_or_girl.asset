@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d58c52efc760f54d98b2e2b3a376782, type: 3}
-  m_Name: l_rukav_8
+  m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
+  m_Name: d_male_or_girl
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 0}
-  NamesItem:
-  - l_rukav_8
+  linkedParametr: {fileID: 0}
+  datas:
+  - {fileID: 11400000, guid: 290980138e1fb7d4ead40eafe102f489, type: 2}
+  - {fileID: 11400000, guid: f87492aeda5175e48a16b7d1809859b6, type: 2}

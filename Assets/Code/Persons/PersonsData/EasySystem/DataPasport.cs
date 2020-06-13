@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[SerializeField]
 public class DataPasport : IPersonVisual {
     [Space (6)] public List<DataEntity> Elements = new List<DataEntity> ();
 

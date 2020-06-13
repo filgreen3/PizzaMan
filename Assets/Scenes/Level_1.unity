@@ -7232,7 +7232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeDelay: 2
-  SizeX: 18
+  SizeX: 12.7
   Offset: {x: 0, y: -3.6, z: 0}
   Speed: 0.05
   fabric: {fileID: 1747167143}

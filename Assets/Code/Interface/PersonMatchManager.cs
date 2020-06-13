@@ -17,9 +17,12 @@ public class PersonMatchManager : MonoBehaviour {
         MatchData.SortParametrs ();
         MatchPasport = MatchData.GetDataPasport ();
 
-        scoreManager.ImageCriteria[0].gameObject.SetActive (true);
-        scoreManager.ImageCriteria[0].transform.GetChild (0).GetComponent<Image> ().sprite =
-            MatchPasport.Elements[0].Icon;
+        for (int i = 0; i < MatchPasport.Elements.Count; i++) {
+            scoreManager.ImageCriteria[i].gameObject.SetActive (true);
+            scoreManager.ImageCriteria[i].transform.GetChild (0).GetComponent<Image> ().sprite =
+                MatchPasport.Elements[i].Icon;
+        }
+
     }
 
     public static void MatchPerson (Person person) {
