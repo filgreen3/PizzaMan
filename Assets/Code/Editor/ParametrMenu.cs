@@ -73,25 +73,26 @@ public class ParametrMenu : VisualElement {
         Debug.Log ($"Removed copy: {listBeforeCount-list.Count}");
         listBeforeCount = list.Count;
 
-        for (int i = list.Count - 1; i >= 0; i--) {
-            var name = list[i].name;
+        /*   for (int i = list.Count - 1; i >= 0; i--) {
+               var name = list[i].name;
 
-            DataEntity entityItem = null;
-            foreach (var entity in entityCollection.Collection) {
+               DataEntity entityItem = null;
+               foreach (var entity in entityCollection.Collection) {
 
-                if (entity.Key != null && name.StartsWith (entity.Key)) {
-                    entityItem = entity;
-                    break;
-                }
-            }
+                   if (entity.Key != null && name.StartsWith (entity.Key)) {
+                       entityItem = entity;
+                       break;
+                   }
+               }
 
-            if (entityItem != null) {
-                entityItem.AddNames (name);
-                list.RemoveAt (i);
-            }
-        }
-        Debug.Log ($"Add subname: {listBeforeCount-list.Count}");
-        listBeforeCount = list.Count;
+               if (entityItem != null) {
+                   entityItem.AddNames (name);
+                   list.RemoveAt (i);
+               }
+           }
+           Debug.Log ($"Add subname: {listBeforeCount-list.Count}");
+           listBeforeCount = list.Count;
+           */
 
         var entitylist = new List<DataEntity> ();
         foreach (var item in list) {

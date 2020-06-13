@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
+  m_Name: m_r_rukav
+  m_EditorClassIdentifier: 
+  lastIndex: 1
+  linkedParametr: {fileID: 11400000, guid: 4a5cdd3ee435e704e99d462ef9e90bc6, type: 2}
+  datas:
+  - {fileID: 11400000, guid: c1f8ccefb9cadb44ba2a45ed6b64aa15, type: 2}
+  - {fileID: 11400000, guid: 7509bbedce7a7784da781684ad9b92fc, type: 2}
+  - {fileID: 11400000, guid: 7509bbedce7a7784da781684ad9b92fc, type: 2}
+  - {fileID: 11400000, guid: 315804d3542386941a99ad25035a0d6e, type: 2}
+  - {fileID: 11400000, guid: 660b7ac656cb8f748b59af78d8fcea09, type: 2}
+  - {fileID: 11400000, guid: 6638321d6bbef844b987cb7219a35cdd, type: 2}

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PersonMatchManager : MonoBehaviour {
 
     [SerializeField] private PersonPreset MatchData;
-    [SerializeField] private IPersonVisual MatchPasport;
+    [SerializeField] private DataPasport MatchPasport;
 
     [SerializeField] private Transform MatchShowBar;
     [SerializeField] private Transform MatchShowElement;
@@ -15,7 +15,12 @@ public class PersonMatchManager : MonoBehaviour {
 
     private void Start () {
         instance = this;
+        MatchData.SortParametrs ();
         MatchPasport = MatchData.GetDataPasport ();
+
+        var data = Instantiate (MatchShowElement, MatchShowBar);
+        data.GetChild (0).GetComponent<Image> ().sprite =
+            MatchPasport.Elements[0].Icon;
     }
 
     public static void MatchPerson (Person person) {

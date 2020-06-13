@@ -16,3 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 0}
   NamesItem:
   - body_black
+  - r_hand_black
+  - l_hand_black
+  - body_black

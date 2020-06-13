@@ -19,16 +19,14 @@ public class DataPasport : IPersonVisual {
 
     private bool MatchEntity (DataEntity entity, DataEntity[] entities) {
         foreach (var item in entities) {
-            if (item.Key.Equals (entity.Key))
+            if (item.EntitiesNames[0].Equals (entity.EntitiesNames[0])) {
                 return true;
+            }
         }
         return false;
     }
 
     public void SettingPerson (Person person) {
-
-        Debug.Log ("Start", person.gameObject);
-
         var transfBody = person.transform.GetChild (0);
 
         for (int i = 0; i < transfBody.childCount; i++) {
@@ -38,10 +36,8 @@ public class DataPasport : IPersonVisual {
         foreach (var item in Elements) {
             var entity = item.GetEntity ();
             var entityNamesList = entity.EntitiesNames;
-            Debug.Log (entityNamesList.Count (), entity);
             foreach (var nameElement in entityNamesList) {
-                transfBody.Find (nameElement).gameObject.SetActive (true);
-                Debug.Log (nameElement, person.gameObject);
+                transfBody.Find (nameElement)?.gameObject.SetActive (true);
             }
         }
     }

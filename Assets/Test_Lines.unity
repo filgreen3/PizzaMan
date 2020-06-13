@@ -378,9 +378,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa262cc83e52a740a41f46eb4e14961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PersonPrefab: {fileID: 6794424484845150886, guid: 8956b19f3557d4243a7561032a445de1,
-    type: 3}
-  Preset: {fileID: 11400000, guid: 0bc2fe342dd47954f81664b535062a32, type: 2}
+  PersonPrefab:
+  - {fileID: 6794424484845150886, guid: 7cf776177d944e94fb408e0317eda117, type: 3}
+  - {fileID: 6794424484845150886, guid: 8956b19f3557d4243a7561032a445de1, type: 3}
+  Preset:
+  - {fileID: 11400000, guid: 99d3b3ad2fd211549b2b5dad21086007, type: 2}
+  - {fileID: 11400000, guid: 0bc2fe342dd47954f81664b535062a32, type: 2}
 --- !u!114 &921872395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3025f5e71d8d224ea2aa964dbe5d962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MatchData: {fileID: 11400000, guid: 0bc2fe342dd47954f81664b535062a32, type: 2}
+  MatchData: {fileID: 11400000, guid: f9fdbadb5dd7bae4fa88d266cca9a42b, type: 2}
   MatchShowBar: {fileID: 1431161114}
   MatchShowElement: {fileID: 2752178306878709842, guid: 5f2b905a70fe353409973623a000d32f,
     type: 3}
