@@ -14,6 +14,8 @@ public class Dialogue : MonoBehaviour
     public SpriteRenderer Char2;
     public Image window;
     public GameObject Exit;
+    public GameObject PauseMenu;
+
 
     bool move = false;
     float t = 0;
@@ -21,8 +23,9 @@ public class Dialogue : MonoBehaviour
 
     public void Close(GameObject go)
     {
-        if (go != null) go.SetActive(true);
         Time.timeScale = 1;
+        if (go != null) go.SetActive(true);
+
 
         gameObject.SetActive(false);
     }
@@ -47,7 +50,7 @@ public class Dialogue : MonoBehaviour
         if (dialogue[stage].PlayerReply)
         {
             Char1.transform.localScale = new Vector2(0.5f, 0.4f);
-            window.transform.position = new Vector3(-1, -2);
+            window.transform.position = new Vector3(Camera.main.transform.position.x-1, -2);
             //window.transform.localScale = new Vector3(-1, 1,1);
             //txt.transform.localScale = new Vector2(-1, 1);
             audio.panStereo = -0.5f;
@@ -55,21 +58,19 @@ public class Dialogue : MonoBehaviour
         else
         {
             Char2.transform.localScale = new Vector2(0.5f, 0.4f);
-            window.transform.position = new Vector2(1, -2);
+            window.transform.position = new Vector2(Camera.main.transform.position.x+1, -2);
             //window.transform.localScale = new Vector3(1, 1,1);
             //txt.transform.localScale = new Vector2(1, 1);
             audio.panStereo = 0.5f;
-
         }
         string text = dialogue[stage].story;
+        for (int i = 0; i < dialogue[stage].Activate.Length; i++) dialogue[stage].Activate[i].SetActive(true);
         window.gameObject.GetComponent<RectTransform>().sizeDelta = 
             new Vector2(500,100+LocalizationManager.instance.GetLocalizetedValue(text).Length/25.0f*40);
-
     }
-
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0)) 
+        if (Input.GetMouseButtonUp(0)&& !PauseMenu.activeSelf) 
         {
             if (stage + 1 < dialogue.Count) Dia();
             else Exit.SetActive(true);
@@ -84,7 +85,6 @@ public class Dialogue : MonoBehaviour
             if (window.transform.position == Vector3.zero) move = false;
         }
     }
-
     IEnumerator PlayText()
     {
         txt.text = "";
@@ -109,5 +109,6 @@ public class Dialogue : MonoBehaviour
     public AudioClip sound;
     public Sprite sprite1;
     public Sprite sprite2;
+    public GameObject[] Activate;
     //public Vector2 scale;
     }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
+  m_Name: koftas
+  m_EditorClassIdentifier: 
+  lastIndex: 3
+  linkedParametr: {fileID: 0}
+  datas:
+  - {fileID: 11400000, guid: dc5f986ae60e10347b331f5d6a8f7e5f, type: 2}
+  - {fileID: 11400000, guid: 00ec97f621270c6499874765d5836d64, type: 2}
+  - {fileID: 11400000, guid: d541670be83921344ab77cc725f43c6c, type: 2}
+  - {fileID: 11400000, guid: 79bade57662ce5b42ab63989364df7f6, type: 2}
+  - {fileID: 11400000, guid: dd2e217a10c70834d87a08f0573e3900, type: 2}
+  - {fileID: 11400000, guid: 69b09a533cff4b34280f937465c0ba86, type: 2}

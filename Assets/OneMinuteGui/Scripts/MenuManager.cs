@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour 
@@ -45,7 +46,8 @@ public class MenuManager : MonoBehaviour
 		Animate(target, true);
 	}
 
-	private void Animate(GameObject target, bool direction)
+
+    private void Animate(GameObject target, bool direction)
 	{
 		if (target == null)
 		{

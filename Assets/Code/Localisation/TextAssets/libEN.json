@@ -9,7 +9,7 @@
 { "key":"6", "value":"EXIT"},
 { "key":"7", "value":"SOUND"},
 { "key":"8", "value":"MUSIC"},
-{ "key":"9", "value":"LANGUAGE (RELOAD NEEDED)"},
+{ "key":"9", "value":"LANGUAGE"},
 { "key":"10", "value":"NINJA MODE"},
 { "key":"11", "value":"RETURN"},
 { "key":"12", "value":"CONTINUE"},
@@ -18,7 +18,7 @@
 { "key":"15", "value":"GO HOME"},
 { "key":"16", "value":"SOUND"},
 { "key":"17", "value":"MUSIC"},
-{ "key":"18", "value":"LANGUAGE"},
+{ "key":"18", "value":"CHANGE LANGUAGE (RELOAD NEEDED)"},
 { "key":"19", "value":"NINJA MODE"},
 { "key":"20", "value":"RETURN"},
 { "key":"21", "value":"SKIP"},
@@ -41,7 +41,7 @@
 { "key":"38", "value":"Hi, kid. You’re late at the very first day."},
 { "key":"39", "value":"Yeah, hi!"},
 { "key":"40", "value":"So how’s the suit?"},
-{ "key":"41", "value":"Well, it’s kinda tight from the bottom and it smells."},
+{ "key":"41", "value":"Well, it’s kinda tight from the bottom and it smells bad."},
 { "key":"42", "value":"It’s fine!"},
 { "key":"43", "value":"And I found a tooth and some nails, is that alright?"},
 { "key":"44", "value":"Alright, alright. You don’t wanna know what I’d found in my pizza. Anyway, let’s sum up, now you work for me and you do everything I say."},
@@ -113,6 +113,7 @@
 { "key":"110", "value":"You know, you really did well to get to this moment..."},
 { "key":"111", "value":"You must be kidding me. What moment? What’s going on here? Is this some kind of show or game?"},
 { "key":"112", "value":"This is the end. But if you wanna to play more, you can use <the endless mode>..."},
-{ "key":"113", "value":"What? Wait, hey!"}
+{ "key":"113", "value":"What? Wait, hey!"},
+{ "key":"114", "value":"Oh! I can’t live like this anymore. Where can I get some money to bring that all back to life?"}
 	]
 }

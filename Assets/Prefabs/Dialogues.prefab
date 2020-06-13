@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -340,7 +340,6 @@ GameObject:
   - component: {fileID: 1570365243992555605}
   - component: {fileID: 1570365243992555606}
   - component: {fileID: 1570365243992555607}
-  - component: {fileID: 1570365243992555624}
   m_Layer: 5
   m_Name: Dialogues
   m_TagString: Untagged
@@ -359,7 +358,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2463630776459450197}
   - {fileID: 1570365245179875648}
   - {fileID: 1570365244547143060}
   - {fileID: 1570365244544636907}
@@ -437,103 +435,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!82 &1570365243992555624
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570365243992555625}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6366936175658063513, guid: 32180efb15203624ba32471de9af5e03,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5b7a618711e774144b6b95d6a5e8e1b1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1570365244037760809
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +810,7 @@ RectTransform:
   - {fileID: 1570365245856792809}
   - {fileID: 1570365244681508699}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -935,6 +836,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244337797926}
   window: {fileID: 1570365245856792808}
   Exit: {fileID: 1570365244339109368}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 78
     PlayerReply: 1
@@ -1101,7 +1003,7 @@ RectTransform:
   - {fileID: 1570365244629759092}
   - {fileID: 1570365245428333773}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1127,6 +1029,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244628045605}
   window: {fileID: 1570365244629759091}
   Exit: {fileID: 1570365244445018148}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 109
     PlayerReply: 1
@@ -1928,7 +1831,7 @@ MonoBehaviour:
         m_MethodName: Close
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2463630776459450198}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2507,7 +2410,7 @@ RectTransform:
   - {fileID: 1570365244767759335}
   - {fileID: 1570365244245838319}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2533,6 +2436,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244287647480}
   window: {fileID: 1570365244767759334}
   Exit: {fileID: 1570365244237071786}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 77
     PlayerReply: 1
@@ -3373,7 +3277,7 @@ RectTransform:
   - {fileID: 1570365243912760677}
   - {fileID: 1570365243873204089}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3399,6 +3303,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244386284779}
   window: {fileID: 1570365243912760676}
   Exit: {fileID: 1570365244228624030}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 62
     PlayerReply: 1
@@ -3545,7 +3450,7 @@ RectTransform:
   - {fileID: 1570365245381475026}
   - {fileID: 1570365244236630654}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3571,6 +3476,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365245860307136}
   window: {fileID: 1570365245381475025}
   Exit: {fileID: 1570365244837702179}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 55
     PlayerReply: 0
@@ -4098,7 +4004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4589,7 +4495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4665,7 +4571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4960,7 +4866,7 @@ RectTransform:
   - {fileID: 1570365244758087802}
   - {fileID: 1570365244037760808}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4986,6 +4892,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244960156233}
   window: {fileID: 1570365244758087801}
   Exit: {fileID: 1570365245056660889}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 104
     PlayerReply: 0
@@ -5447,7 +5354,7 @@ MonoBehaviour:
         m_MethodName: Close
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1570365245179875649}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5638,7 +5545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5881,7 +5788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6349,7 +6256,7 @@ RectTransform:
   - {fileID: 1570365245002215463}
   - {fileID: 1570365245768220380}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6375,6 +6282,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365244056531044}
   window: {fileID: 1570365245002215462}
   Exit: {fileID: 1570365244866504583}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 38
     PlayerReply: 0
@@ -6894,7 +6802,7 @@ RectTransform:
   - {fileID: 1570365244920995261}
   - {fileID: 1570365245289584098}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6920,6 +6828,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365245855229682}
   window: {fileID: 1570365244920995260}
   Exit: {fileID: 1570365244715383068}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 68
     PlayerReply: 0
@@ -7425,7 +7334,7 @@ RectTransform:
   - {fileID: 1570365245631976102}
   - {fileID: 1570365244830624341}
   m_Father: {fileID: 1570365243992555604}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7451,6 +7360,7 @@ MonoBehaviour:
   Char2: {fileID: 1570365245530279961}
   window: {fileID: 1570365245631976101}
   Exit: {fileID: 1570365244347480627}
+  PauseMenu: {fileID: 0}
   dialogue:
   - story: 85
     PlayerReply: 1
@@ -7730,7 +7640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8251,7 +8161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9066,7 +8976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b542bf238271c0942b6e187cba6143fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c0db8f8b70623d42b5ded2115d93406, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9514,89 +9424,3 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0421\u041E\u0413\u041B\u0410\u0421\u0418\u0422\u042C\u0421\u042F"
---- !u!1001 &1570365244244427794
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1570365243992555604}
-    m_Modifications:
-    - target: {fileID: 4033991605460063044, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_Name
-      value: Com_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063044, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ce5326cba5f20a4409da6aeab453f34d, type: 3}
---- !u!4 &2463630776459450197 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4033991605460063047, guid: ce5326cba5f20a4409da6aeab453f34d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1570365244244427794}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2463630776459450198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4033991605460063044, guid: ce5326cba5f20a4409da6aeab453f34d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1570365244244427794}
-  m_PrefabAsset: {fileID: 0}
