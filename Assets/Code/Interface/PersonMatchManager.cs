@@ -8,7 +8,7 @@ public class PersonMatchManager : MonoBehaviour {
     [SerializeField] private PersonPreset MatchData;
     [SerializeField] private DataPasport MatchPasport;
 
-    [SerializeField] private Score sorceManager;
+    [SerializeField] private Score scoreManager;
 
     public static PersonMatchManager instance;
 
@@ -17,16 +17,17 @@ public class PersonMatchManager : MonoBehaviour {
         MatchData.SortParametrs ();
         MatchPasport = MatchData.GetDataPasport ();
 
-        sorceManager.ImageCriteria[0].gameObject.SetActive (true);
-        sorceManager.ImageCriteria[0].transform.GetChild (0).GetComponent<Image> ().sprite =
+        scoreManager.ImageCriteria[0].gameObject.SetActive (true);
+        scoreManager.ImageCriteria[0].transform.GetChild (0).GetComponent<Image> ().sprite =
             MatchPasport.Elements[0].Icon;
     }
 
     public static void MatchPerson (Person person) {
         if (instance.MatchPasport.Match (person.Data)) {
-            Debug.Log ("Cool!");
+            instance.scoreManager.FlyersGood++;
         } else {
             Debug.Log ("Bad!");
+            instance.scoreManager.lossesGood++;
         }
     }
 
