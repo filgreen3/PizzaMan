@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e41f0c8452a58e140831a69946d464eb, type: 3}
-  m_Name: Data
+  m_Name: Level_2_DataPreset 1
   m_EditorClassIdentifier: 
   IncludeParametr: {fileID: 0}
   Parametrs:
-  - {fileID: 11400000, guid: 4a5cdd3ee435e704e99d462ef9e90bc6, type: 2}
+  - {fileID: 11400000, guid: db805b495e8b4e34881e6c48a5ee04d0, type: 2}
+  - {fileID: 11400000, guid: 0f68b6650a6105046bacd8ae3fcfcc60, type: 2}
+  - {fileID: 11400000, guid: 8c965484ae2fc5e46a156751594a397f, type: 2}

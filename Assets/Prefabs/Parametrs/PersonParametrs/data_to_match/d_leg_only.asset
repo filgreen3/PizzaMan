@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
-  m_Name: d_girl
+  m_Name: d_leg_only
   m_EditorClassIdentifier: 
   lastIndex: 0
   linkedParametr: {fileID: 0}
   datas:
-  - {fileID: 11400000, guid: fba14aaf384842a42acbc47ef4af83ee, type: 2}
-  - {fileID: 11400000, guid: d8d17223d85394a459e7f742a64f926f, type: 2}
+  - {fileID: 11400000, guid: b428909dc142afe45a4d2ce2bec92421, type: 2}
   - {fileID: 11400000, guid: a26301e751a30064ba902509415bffea, type: 2}
