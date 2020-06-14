@@ -61,6 +61,7 @@ public class Person : MonoBehaviour {
             } else {
                 PersonMatchManager.instance.MatchPasportBad.SettingPerson (this, true);
             }
+            MainManager.NeedToRebuild = false;
         }
     }
 }
