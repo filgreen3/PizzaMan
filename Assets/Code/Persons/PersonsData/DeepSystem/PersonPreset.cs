@@ -8,8 +8,8 @@ public class PersonPreset : ScriptableObject {
     public PersonParametr IncludeParametr;
     public DataEntityGiver[] Parametrs;
 
-    private List<DataEntityGiver> standartParametrs;
-    private List<PersonParametr> linkedParametrs;
+    private List<DataEntityGiver> standartParametrs = new List<DataEntityGiver> ();
+    private List<PersonParametr> linkedParametrs = new List<PersonParametr> ();
 
     public DataPasport GetDataPasport () {
         var pasport = new DataPasport ();
