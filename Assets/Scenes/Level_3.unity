@@ -7296,7 +7296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3025f5e71d8d224ea2aa964dbe5d962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MatchData: {fileID: 11400000, guid: 6e398e11595bad34ca9aef237f0abc5c, type: 2}
+  MatchData: {fileID: 11400000, guid: 17e6d677ccf14784592a7a04a7961023, type: 2}
   scoreManager: {fileID: 6465630543607377924}
   playerMouse: {fileID: 290002168}
   PersonTransforms: []
@@ -7330,7 +7330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae9260a39011824a87577e2ce31aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PeopleCount: 30
+  PeopleCount: 45
   SizeX: 45.1
   Speed: 0.05
   mainLine: -3.7
