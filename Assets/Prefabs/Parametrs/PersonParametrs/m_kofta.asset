@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
   m_Name: m_kofta
   m_EditorClassIdentifier: 
-  lastIndex: 1
+  lastIndex: 3
   linkedParametr: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 7a4c063a1b99963448a31a2703e028a2, type: 2}
   - {fileID: 11400000, guid: 1c8c695d1f603f04dab2ab771aa9c16e, type: 2}
   - {fileID: 11400000, guid: 689bb14f2d9c34e41a3a85dd37442399, type: 2}
   - {fileID: 11400000, guid: e8c19f6b2a1375e48b33433038d0a1d4, type: 2}
-  - {fileID: 11400000, guid: 8071e7c726454dc4f83e150263848310, type: 2}
-  - {fileID: 11400000, guid: ceb6ea78c23a70645bc35feacaa8ff33, type: 2}

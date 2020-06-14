@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e77999ec1a97f4ca6f0a80e8d92a75, type: 3}
   m_Name: g_wear
   m_EditorClassIdentifier: 
-  lastIndex: 0
+  lastIndex: 3
   linkedParametr: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: c7ba69d064a74d34e9817ca05917b7f7, type: 2}

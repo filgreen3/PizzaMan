@@ -42,7 +42,7 @@ public class Score : MonoBehaviour {
         if (lossesGood > 0&& lossesGood < 4) PenaltyGood[lossesGood - 1].SetActive (true);
         if (lossesBad > 0&& lossesBad < 4) PenaltyBad[lossesBad - 1].SetActive (true);
         if (lossesGood > 2 || time < 0) FiredBoss.SetActive (true);
-        if (lossesBad > 2 || time < 0) FiredBad.SetActive (true);
+        if (lossesBad > 2) FiredBad.SetActive (true);
         if (FlyersGood == 0 && FlyersBad == 0) {
             fader.gameObject.SetActive (true);
             fader.next = SceneManager.GetActiveScene ().buildIndex + 1;

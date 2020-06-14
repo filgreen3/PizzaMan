@@ -13,7 +13,7 @@ public class PersonMatchManager : MonoBehaviour {
     AudioSource audio;
     public AudioClip Win;
     public AudioClip Loose;
-
+    public bool endless = false;
     [SerializeField] private Score scoreManager;
 
     [SerializeField] private Transform playerMouse;
@@ -36,7 +36,8 @@ public class PersonMatchManager : MonoBehaviour {
         if (isGood) {
             if (instance.MatchPasportGood.Match (person.Data)) {
                 Debug.Log ("Good!");
-                instance.scoreManager.FlyersGood--;
+                if (instance.endless) {instance.scoreManager.FlyersGood++; instance.scoreManager.time += 20; }
+                else instance.scoreManager.FlyersGood--;
                 instance.UpdateMatcher (true);
                 instance.audio.PlayOneShot(instance.Win);
             } else {
@@ -50,7 +51,8 @@ public class PersonMatchManager : MonoBehaviour {
                 Debug.Log ("Good!");
                 if (instance.badpanel.activeSelf)
                 {
-                    instance.scoreManager.FlyersBad--;
+                    if (instance.endless) { instance.scoreManager.FlyersBad++; instance.scoreManager.time += 20; }
+                    else instance.scoreManager.FlyersBad--;
                     instance.UpdateMatcher(false);
                     instance.audio.PlayOneShot(instance.Win);
                 }

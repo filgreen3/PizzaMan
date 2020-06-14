@@ -15,7 +15,7 @@ MonoBehaviour:
   lastIndex: 0
   Icon: {fileID: 21300000, guid: 53819d3564092dd428ab89bc8b5113bb, type: 3}
   NamesItem:
-  - kofta_1
-  - kofta_1_bk
-  - l_rukav_1
-  - r_rukav_1
+  - wear_25
+  - wear_25_bk
+  - l_rukav_7
+  - r_rukav_7

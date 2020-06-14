@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public GameObject BossReply0;
+    public GameObject BossReply01;
     public GameObject BossReply1;
     public GameObject BossReply2;
     public GameObject BossReply3;
@@ -45,18 +46,23 @@ public class PlayerController : MonoBehaviour {
         transf.position = new Vector3(transf.position.x, transf.position.y, transf.position.y*10);
         if (Mathf.Abs (transf.position.x) > RectExtra1.x / 2f && Mathf.Abs (transf.position.x) < RectExtra2.x / 2f) {
             BossReply0.SetActive (false);
+            BossReply01.SetActive (false);
             BossReply1.SetActive (true);
             BossReply2.SetActive (false);
             BossReply3.SetActive (false);
         }
         if (Mathf.Abs (transf.position.x) > RectExtra2.x / 2f && Mathf.Abs (transf.position.x) < RectExtra3.x / 2f) {
 
+            BossReply0.SetActive(false);
+            BossReply01.SetActive(false);
             BossReply2.SetActive (true);
             BossReply1.SetActive (false);
             BossReply3.SetActive (false);
         }
         if (Mathf.Abs (transf.position.x) > RectExtra3.x / 2f && Mathf.Abs (transf.position.x) < RectExtra4.x / 2f) {
 
+            BossReply0.SetActive(false);
+            BossReply01.SetActive(false);
             BossReply3.SetActive (true);
             BossReply2.SetActive (false);
             BossReply1.SetActive (false);

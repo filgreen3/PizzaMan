@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radious: 3
-  offset: {x: 0, y: 3, z: 0}
+  offset: {x: 0, y: 5, z: 0}
 --- !u!1 &2457855142152440440
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   BossReply0: {fileID: 0}
+  BossReply01: {fileID: 0}
   BossReply1: {fileID: 0}
   BossReply2: {fileID: 0}
   BossReply3: {fileID: 0}

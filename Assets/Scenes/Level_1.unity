@@ -6549,6 +6549,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5976017209510354056, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976017209510541384, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8535853720866964320, guid: 1398e6088aa1df547b7827ca2da8bf29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7360,6 +7370,7 @@ MonoBehaviour:
   badpanel: {fileID: 24433184}
   Win: {fileID: 8300000, guid: 8e3430b66f056a54eac97662fd0d8a6f, type: 3}
   Loose: {fileID: 8300000, guid: 9fd7ba4d937866445ac142421b4821b6, type: 3}
+  endless: 0
   scoreManager: {fileID: 6465630543607377924}
   playerMouse: {fileID: 367524072}
   PersonTransforms: []
@@ -8983,7 +8994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &444658538860193818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9075,7 +9086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &849911071513885941
 GameObject:
   m_ObjectHideFlags: 0
@@ -9989,7 +10000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6030392547456038247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10869,6 +10880,11 @@ PrefabInstance:
       propertyPath: RectExtra4.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3178336865132140093, guid: 7ac824eeffb3df544abaf1f1f6c7ae22,
+        type: 3}
+      propertyPath: BossReply01
+      value: 
+      objectReference: {fileID: 1410441909}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac824eeffb3df544abaf1f1f6c7ae22, type: 3}
 --- !u!222 &9221386937576477179

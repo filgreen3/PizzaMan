@@ -35,7 +35,7 @@ public class Fader : MonoBehaviour
             if (t>=1)
             {
                 Time.timeScale = 1;
-                PlayerPrefs.SetInt("Level", next);
+                if (next!=0)PlayerPrefs.SetInt("Level", next);
                 SceneManager.LoadScene(next);
             }
 

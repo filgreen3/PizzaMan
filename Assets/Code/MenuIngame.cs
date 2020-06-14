@@ -14,6 +14,10 @@ public class MenuIngame : MonoBehaviour
     public GameObject[] PauseMenuall;
     public GameObject MainMenu;
     public Fader fader;
+
+    public GameObject Continue;
+    public GameObject EndlessGame;
+
     
     bool timescale0 = false;
     public void Resume()
@@ -29,16 +33,29 @@ public class MenuIngame : MonoBehaviour
             PauseMenuall[i].SetActive(false);
         PauseMenu.SetActive(false);
     }
-    public void Endless(GameObject New)
+    public void Endless1(GameObject New)
     {
         New.SetActive(true);
-        MainMenu.SetActive(false);
 
+}    
+    public void Endless2(GameObject New)
+    {
+        New.SetActive(true);
+
+}    
+    public void Endless3(GameObject New)
+    {
+        New.SetActive(false);
 }    
     public void New()
     {
         fader.gameObject.SetActive(true);
         fader.next = 1;
+    }       
+    public void Load()
+    {
+        fader.gameObject.SetActive(true);
+        fader.next = PlayerPrefs.GetInt("Level");
     }    
     public void Music(AudioMixer audio)
     {
@@ -79,7 +96,21 @@ public class MenuIngame : MonoBehaviour
     }
     private void Start()
     {
-        
+        Debug.Log(PlayerPrefs.GetInt("Level"));
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (PlayerPrefs.GetInt("Level") > 2)
+            {
+                Continue.GetComponent<Button>().interactable = true;
+                Continue.GetComponent<Image>().color = Color.white;
+            }
+            if (PlayerPrefs.GetInt("Level") > 6)
+            {
+                EndlessGame.GetComponent<Button>().interactable = true;
+                EndlessGame.GetComponent<Image>().color = Color.white;
+            }
+        }
+
         Application.targetFrameRate = 60;
         if (PlayerPrefs.GetFloat("Music") != 0) Musics.isOn = false;
         if (PlayerPrefs.GetFloat("Sound") != 0) Sounds.isOn = false;
@@ -87,7 +118,7 @@ public class MenuIngame : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyUp(KeyCode.Escape) && !PauseMenu.activeSelf)
+        if (Input.GetKeyUp(KeyCode.Escape) && !PauseMenu.activeSelf && EndlessGame == null)
         {
             PauseMenu.SetActive(true);
             if (Time.timeScale > 0)
@@ -97,8 +128,6 @@ public class MenuIngame : MonoBehaviour
             }
             Debug.Log(Time.timeScale);
         }
-
-
 
     }
 }
