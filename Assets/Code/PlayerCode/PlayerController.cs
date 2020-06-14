@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         if ((transf.position.x < RectMain.x / 2f + Offset.x || axisX < 0) &&
             (transf.position.x > -RectMain.x / 2f + Offset.x || axisX > 0))
             transf.Translate (axisX * speed, 0, 0);
-        transf.position = new Vector3(transf.position.x, transf.position.y, transf.position.y);
+        transf.position = new Vector3(transf.position.x, transf.position.y, transf.position.y*10);
         if (Mathf.Abs (transf.position.x) > RectExtra1.x / 2f && Mathf.Abs (transf.position.x) < RectExtra2.x / 2f) {
             BossReply0.SetActive (false);
             BossReply1.SetActive (true);

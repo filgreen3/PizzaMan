@@ -32,7 +32,7 @@ public class Person : MonoBehaviour {
         Armature.animation.timeScale = Speed * 25f;
 
         var y = ((Random.value - 0.5f) * delta + mainLine);
-        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y;
+        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y*10;
 
         Data.SettingPerson (this);
     }

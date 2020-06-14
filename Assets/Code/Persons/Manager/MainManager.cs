@@ -30,7 +30,7 @@ public class MainManager : MonoBehaviour {
             var y = ((Random.value - 0.5f) * delta + mainLine);
 
             person.transform.position = Vector3.right * SizeX * (Random.value - 0.5f) +
-                Vector3.up * y + Vector3.forward * y;
+                Vector3.up * y + Vector3.forward * y*10;
 
             persons[i] = person;
 

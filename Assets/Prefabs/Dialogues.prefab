@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1570365243867364474}
   - component: {fileID: 1570365243867364472}
   - component: {fileID: 1570365243867364473}
+  - component: {fileID: 1835108859344531612}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -78,6 +79,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &1835108859344531612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365243867364475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365243873204090
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,36 +857,46 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 79
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 52b9d0e5bc9823d45b9619a812449352, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 80
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 964dde12f6a68964b8df43b8eca4afab, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 3f560b73302ded84fa38106ddbda9f92, type: 3}
+    Activate:
+    - {fileID: 0}
   - story: 81
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 87a3eb622ca425145a51889caabc0dd5, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: eddafbacc027e974abe5136cc4296390, type: 3}
+    Activate: []
   - story: 82
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate:
+    - {fileID: 0}
+    - {fileID: 0}
   - story: 102
     PlayerReply: 0
     sound: {fileID: 8300000, guid: eecc18a8d7bf41d45a4f5f7a4b6b879a, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 103
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
 --- !u!82 &1570365244096175773
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1036,26 +1060,31 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
+    Activate: []
   - story: 110
     PlayerReply: 0
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
+    Activate: []
   - story: 111
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
+    Activate: []
   - story: 112
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 4d53dba4feed1c8439f8d83947eca7d9, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
+    Activate: []
   - story: 113
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
+    Activate: []
 --- !u!82 &1570365244141956831
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1163,6 +1192,7 @@ GameObject:
   - component: {fileID: 1570365244144726407}
   - component: {fileID: 1570365244144726405}
   - component: {fileID: 1570365244144726406}
+  - component: {fileID: 683428119752498048}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1230,6 +1260,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u041E\u0422\u041A\u0410\u0417\u0410\u0422\u042C\u0421\u042F"
+--- !u!114 &683428119752498048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365244144726424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 27
 --- !u!1 &1570365244165750016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2352,7 @@ GameObject:
   - component: {fileID: 1570365244325962927}
   - component: {fileID: 1570365244325962925}
   - component: {fileID: 1570365244325962926}
+  - component: {fileID: 2765245349040699518}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2376,6 +2420,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &2765245349040699518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365244325962912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365244330494042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,16 +2500,19 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 83
     PlayerReply: 0
     sound: {fileID: 8300000, guid: eecc18a8d7bf41d45a4f5f7a4b6b879a, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 931348f19bf6e0842ba7492832ca7796, type: 3}
+    Activate: []
   - story: 84
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 2a754f0cd4037a447a1670550f1413f4, type: 3}
     sprite2: {fileID: 21300000, guid: 931348f19bf6e0842ba7492832ca7796, type: 3}
+    Activate: []
 --- !u!82 &1570365244330494023
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2803,6 +2863,7 @@ GameObject:
   - component: {fileID: 1570365244343147129}
   - component: {fileID: 1570365244343147111}
   - component: {fileID: 1570365244343147128}
+  - component: {fileID: 8778636729213878840}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2870,6 +2931,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &8778636729213878840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365244343147130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365244347480627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,16 +3384,19 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 63
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 3e22a8048e1734a4cb4aae40a641dc71, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: af984e77670a3394389edd90bf5d1602, type: 3}
+    Activate: []
   - story: 64
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 4d53dba4feed1c8439f8d83947eca7d9, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
 --- !u!82 &1570365244544636905
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3483,36 +3560,43 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: b9bea4b2656183b468f0df975810589f, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 56
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 0b0167dd2e5d0a7439a2d95bfdc4a767, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 57
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 926222bea8936f54c8e4648177a83063, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 58
     PlayerReply: 1
     sound: {fileID: 0}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 59
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 3e22a8048e1734a4cb4aae40a641dc71, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: d3cafa828314fdb4eafd0981c2f9dcdb, type: 3}
+    Activate: []
   - story: 60
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 61
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 3e22a8048e1734a4cb4aae40a641dc71, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 0bdbf6b7c936fe74f9dfeac34508685b, type: 3}
+    Activate: []
 --- !u!82 &1570365244547143058
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4025,6 +4109,7 @@ GameObject:
   - component: {fileID: 1570365244646038300}
   - component: {fileID: 1570365244646038298}
   - component: {fileID: 1570365244646038299}
+  - component: {fileID: 4114809760276985496}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4092,6 +4177,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &4114809760276985496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365244646038301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365244681508700
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +4690,7 @@ GameObject:
   - component: {fileID: 1570365244807784912}
   - component: {fileID: 1570365244807784926}
   - component: {fileID: 1570365244807784927}
+  - component: {fileID: 6098085673179254462}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4659,6 +4758,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &6098085673179254462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365244807784913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365244824251035
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,26 +5011,31 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 52b9d0e5bc9823d45b9619a812449352, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 105
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 106
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 964dde12f6a68964b8df43b8eca4afab, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 107
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 87a3eb622ca425145a51889caabc0dd5, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 7a9dbe3b128abcf4f9aefbc77e8eac98, type: 3}
+    Activate: []
   - story: 108
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
 --- !u!82 &1570365244833290436
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6155,6 +6272,7 @@ GameObject:
   - component: {fileID: 1570365245153661704}
   - component: {fileID: 1570365245153661942}
   - component: {fileID: 1570365245153661943}
+  - component: {fileID: 552923046126305777}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6222,6 +6340,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &552923046126305777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365245153661705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365245179875649
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,46 +6420,59 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 6d3f9f55d653f0e48ae222dd71bc8387, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 39
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 40
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 926222bea8936f54c8e4648177a83063, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 41
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 42
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 6d3f9f55d653f0e48ae222dd71bc8387, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: d3cafa828314fdb4eafd0981c2f9dcdb, type: 3}
+    Activate: []
   - story: 43
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 44
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 3e22a8048e1734a4cb4aae40a641dc71, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate:
+    - {fileID: 0}
   - story: 45
     PlayerReply: 0
     sound: {fileID: 8300000, guid: b9bea4b2656183b468f0df975810589f, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 0bdbf6b7c936fe74f9dfeac34508685b, type: 3}
+    Activate:
+    - {fileID: 0}
+    - {fileID: 0}
   - story: 46
     PlayerReply: 0
     sound: {fileID: 8300000, guid: b9bea4b2656183b468f0df975810589f, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 0bdbf6b7c936fe74f9dfeac34508685b, type: 3}
+    Activate:
+    - {fileID: 0}
 --- !u!82 &1570365245179875662
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6701,6 +6845,7 @@ GameObject:
   - component: {fileID: 1570365245294116512}
   - component: {fileID: 1570365245294116526}
   - component: {fileID: 1570365245294116527}
+  - component: {fileID: 1439031448737267422}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6768,6 +6913,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &1439031448737267422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365245294116513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365245333261614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6835,46 +6993,55 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: eecc18a8d7bf41d45a4f5f7a4b6b879a, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 69
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 70
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 52b9d0e5bc9823d45b9619a812449352, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 71
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 0b0167dd2e5d0a7439a2d95bfdc4a767, type: 3}
     sprite1: {fileID: 21300000, guid: 2a754f0cd4037a447a1670550f1413f4, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 72
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 964dde12f6a68964b8df43b8eca4afab, type: 3}
     sprite1: {fileID: 21300000, guid: 2a754f0cd4037a447a1670550f1413f4, type: 3}
     sprite2: {fileID: 21300000, guid: 3f560b73302ded84fa38106ddbda9f92, type: 3}
+    Activate: []
   - story: 73
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 74
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 52b9d0e5bc9823d45b9619a812449352, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 75
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 13cee149c40873946981e60c1f590546, type: 3}
     sprite2: {fileID: 21300000, guid: 078013d32a111074bbc4802ab609bc88, type: 3}
+    Activate: []
   - story: 76
     PlayerReply: 0
     sound: {fileID: 8300000, guid: eecc18a8d7bf41d45a4f5f7a4b6b879a, type: 3}
     sprite1: {fileID: 21300000, guid: 13faf7d4e043c0e43a4141b8e233f980, type: 3}
     sprite2: {fileID: 21300000, guid: 931348f19bf6e0842ba7492832ca7796, type: 3}
+    Activate: []
 --- !u!82 &1570365245333261611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7367,31 +7534,37 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 50c8781be36ca794e9855b1ccf741d30, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 86
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 6d3f9f55d653f0e48ae222dd71bc8387, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: af984e77670a3394389edd90bf5d1602, type: 3}
+    Activate: []
   - story: 87
     PlayerReply: 1
     sound: {fileID: 8300000, guid: ad7e27bfa87b06544a437a663f6c3dd0, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 88
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 205b25f52a910b64a81ebb8d73d6c5bb, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 89
     PlayerReply: 0
     sound: {fileID: 8300000, guid: 3e22a8048e1734a4cb4aae40a641dc71, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
   - story: 90
     PlayerReply: 1
     sound: {fileID: 8300000, guid: 4d53dba4feed1c8439f8d83947eca7d9, type: 3}
     sprite1: {fileID: 21300000, guid: 311115ee98c232541ac08373a2098f7f, type: 3}
     sprite2: {fileID: 21300000, guid: 8d4cbaeed4e747e4eb2683dbb7d6f63e, type: 3}
+    Activate: []
 --- !u!82 &1570365245368705198
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7834,6 +8007,7 @@ GameObject:
   - component: {fileID: 1570365245528046493}
   - component: {fileID: 1570365245528046491}
   - component: {fileID: 1570365245528046492}
+  - component: {fileID: 7641150901942184899}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7901,6 +8075,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0414\u0430\u043B\u0435\u0435"
+--- !u!114 &7641150901942184899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365245528046494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 1
 --- !u!1 &1570365245530279962
 GameObject:
   m_ObjectHideFlags: 0
@@ -9357,6 +9544,7 @@ GameObject:
   - component: {fileID: 1570365245985151447}
   - component: {fileID: 1570365245985151445}
   - component: {fileID: 1570365245985151446}
+  - component: {fileID: 7896812004773117053}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9424,3 +9612,16 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0421\u041E\u0413\u041B\u0410\u0421\u0418\u0422\u042C\u0421\u042F"
+--- !u!114 &7896812004773117053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570365245985151464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be61d84ec69dc394795ad1379e38149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 26
