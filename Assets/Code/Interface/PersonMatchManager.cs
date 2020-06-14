@@ -9,6 +9,10 @@ public class PersonMatchManager : MonoBehaviour {
     [SerializeField] private PersonPreset MatchData;
     [SerializeField] private DataPasport MatchPasportGood;
     [SerializeField] private DataPasport MatchPasportBad;
+    public GameObject badpanel;
+    AudioSource audio;
+    public AudioClip Win;
+    public AudioClip Loose;
 
     [SerializeField] private Score scoreManager;
 
@@ -24,7 +28,7 @@ public class PersonMatchManager : MonoBehaviour {
 
         UpdateMatcher (true);
         UpdateMatcher (false);
-
+        audio = GetComponent<AudioSource>();
     }
 
     public static void MatchPerson (Person person, bool isGood) {
@@ -34,18 +38,30 @@ public class PersonMatchManager : MonoBehaviour {
                 Debug.Log ("Good!");
                 instance.scoreManager.FlyersGood--;
                 instance.UpdateMatcher (true);
+                instance.audio.PlayOneShot(instance.Win);
             } else {
                 Debug.Log ("Bad!");
                 instance.scoreManager.lossesGood++;
+                instance.UpdateMatcher(true);
+                instance.audio.PlayOneShot(instance.Loose);
             }
         } else {
             if (instance.MatchPasportBad.Match (person.Data)) {
                 Debug.Log ("Good!");
-                instance.scoreManager.FlyersBad--;
-                instance.UpdateMatcher (false);
+                if (instance.badpanel.activeSelf)
+                {
+                    instance.scoreManager.FlyersBad--;
+                    instance.UpdateMatcher(false);
+                    instance.audio.PlayOneShot(instance.Win);
+                }
             } else {
                 Debug.Log ("Bad!");
-                instance.scoreManager.lossesBad++;
+                if (instance.badpanel.activeSelf) 
+                { 
+                    instance.scoreManager.lossesBad++;
+                    instance.UpdateMatcher(false);
+                    instance.audio.PlayOneShot(instance.Loose);
+                }
             }
         }
     }

@@ -16351,7 +16351,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 9088214128360907188}
-        m_MethodName: NewGame
+        m_MethodName: New
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
+    public bool endless;
     public float time;
     float StartTime;
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kofta_4
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 21300000, guid: 6d13281c01609d94788360b325cbdaac, type: 3}
+  Icon: {fileID: 21300000, guid: 7fbf062be2b6d074b8c41641072294c3, type: 3}
   NamesItem:
   - kofta_4
   - kofta_4_bk
