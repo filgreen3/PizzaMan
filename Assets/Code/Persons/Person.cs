@@ -32,7 +32,7 @@ public class Person : MonoBehaviour {
         Armature.animation.timeScale = Speed * 25f;
 
         var y = ((Random.value - 0.5f) * delta + mainLine);
-        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y*10;
+        transf.position = Vector3.right * transf.position.x + Vector3.up * y + Vector3.forward * y * 10;
 
         Data.SettingPerson (this);
     }
@@ -52,5 +52,15 @@ public class Person : MonoBehaviour {
     private void EndLine () {
         Dir.x = -Dir.x;
         Init ();
+
+        if (MainManager.NeedToRebuild) {
+            Debug.Log ("Win person on");
+            var score = PersonMatchManager.instance.scoreManager;
+            if (score.FlyersGood > score.FlyersBad) {
+                PersonMatchManager.instance.MatchPasportGood.SettingPerson (this, true);
+            } else {
+                PersonMatchManager.instance.MatchPasportBad.SettingPerson (this, true);
+            }
+        }
     }
 }

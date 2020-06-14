@@ -32,7 +32,14 @@ public class PersonPreset : ScriptableObject {
                 standartParametrs.Add (item);
             }
         }
-
     }
 
+    public void DisablePresetParts (Person person) {
+        var names = Parametrs.SelectMany (item => item.EntitiesNames).Distinct ().ToArray ();
+        var transfBody = person.transform.GetChild (0);
+
+        foreach (var name in names) {
+            transfBody.Find (name)?.gameObject.SetActive (false);
+        }
+    }
 }

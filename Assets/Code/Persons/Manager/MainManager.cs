@@ -15,12 +15,12 @@ public class MainManager : MonoBehaviour {
     [SerializeField] private PersonFabric fabric;
     [SerializeField] private PersonMatchManager matchManager;
 
+    public static bool NeedToRebuild;
+
     private void Start () {
         var persons = new Person[PeopleCount];
         for (int i = 0; i < PeopleCount; i++) {
-
             var point = Vector3.right * SizeX * 0.5f * Mathf.Sign (Random.value - 0.5f);
-
             var person = fabric.CreatePerson (point);
             person.Speed = Speed;
             person.mainLine = mainLine;
@@ -28,18 +28,25 @@ public class MainManager : MonoBehaviour {
             person.Init ();
 
             var y = ((Random.value - 0.5f) * delta + mainLine);
-
             person.transform.position = Vector3.right * SizeX * (Random.value - 0.5f) +
-                Vector3.up * y + Vector3.forward * y*10;
+                Vector3.up * y + Vector3.forward * y * 10;
 
             persons[i] = person;
-
         }
         matchManager.PersonTransforms = persons;
+        StartCoroutine (GameLoop ());
+    }
+
+    IEnumerator GameLoop () {
+        var waiter = new WaitForSeconds (15f);
+
+        while (true) {
+            NeedToRebuild = true;
+            yield return waiter;
+        }
     }
 
     void OnDrawGizmos () {
-
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube (Vector3.up * mainLine, Vector3.right * SizeX + Vector3.up * delta);
         Gizmos.color = Color.green - Color.black * 0.8f;

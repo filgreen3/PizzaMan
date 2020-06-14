@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class PersonMatchManager : MonoBehaviour {
 
-    [SerializeField] private PersonPreset MatchData;
-    [SerializeField] private DataPasport MatchPasportGood;
-    [SerializeField] private DataPasport MatchPasportBad;
+    public PersonPreset MatchData;
+
+    public DataPasport MatchPasportGood;
+    public DataPasport MatchPasportBad;
     public GameObject badpanel;
+
     AudioSource audio;
     public AudioClip Win;
     public AudioClip Loose;
     public bool endless = false;
-    [SerializeField] private Score scoreManager;
+    public Score scoreManager;
 
     [SerializeField] private Transform playerMouse;
 
@@ -28,7 +30,7 @@ public class PersonMatchManager : MonoBehaviour {
 
         UpdateMatcher (true);
         UpdateMatcher (false);
-        audio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource> ();
     }
 
     public static void MatchPerson (Person person, bool isGood) {
@@ -36,33 +38,29 @@ public class PersonMatchManager : MonoBehaviour {
         if (isGood) {
             if (instance.MatchPasportGood.Match (person.Data)) {
                 Debug.Log ("Good!");
-                if (instance.endless) {instance.scoreManager.FlyersGood++; instance.scoreManager.time += 20; }
-                else instance.scoreManager.FlyersGood--;
+                if (instance.endless) { instance.scoreManager.FlyersGood++; instance.scoreManager.time += 20; } else instance.scoreManager.FlyersGood--;
                 instance.UpdateMatcher (true);
-                instance.audio.PlayOneShot(instance.Win);
+                instance.audio.PlayOneShot (instance.Win);
             } else {
                 Debug.Log ("Bad!");
                 instance.scoreManager.lossesGood++;
-                instance.UpdateMatcher(true);
-                instance.audio.PlayOneShot(instance.Loose);
+                instance.UpdateMatcher (true);
+                instance.audio.PlayOneShot (instance.Loose);
             }
         } else {
             if (instance.MatchPasportBad.Match (person.Data)) {
                 Debug.Log ("Good!");
-                if (instance.badpanel.activeSelf)
-                {
-                    if (instance.endless) { instance.scoreManager.FlyersBad++; instance.scoreManager.time += 20; }
-                    else instance.scoreManager.FlyersBad--;
-                    instance.UpdateMatcher(false);
-                    instance.audio.PlayOneShot(instance.Win);
+                if (instance.badpanel.activeSelf) {
+                    if (instance.endless) { instance.scoreManager.FlyersBad++; instance.scoreManager.time += 20; } else instance.scoreManager.FlyersBad--;
+                    instance.UpdateMatcher (false);
+                    instance.audio.PlayOneShot (instance.Win);
                 }
             } else {
                 Debug.Log ("Bad!");
-                if (instance.badpanel.activeSelf) 
-                { 
+                if (instance.badpanel.activeSelf) {
                     instance.scoreManager.lossesBad++;
-                    instance.UpdateMatcher(false);
-                    instance.audio.PlayOneShot(instance.Loose);
+                    instance.UpdateMatcher (false);
+                    instance.audio.PlayOneShot (instance.Loose);
                 }
             }
         }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [SerializeField]
 public class DataPasport : IPersonVisual {
@@ -34,6 +33,23 @@ public class DataPasport : IPersonVisual {
         for (int i = 0; i < transfBody.childCount; i++) {
             transfBody.GetChild (i).gameObject.SetActive (false);
         }
+
+        foreach (var item in Elements) {
+            var entity = item.GetEntity ();
+            var entityNamesList = entity.EntitiesNames;
+            foreach (var nameElement in entityNamesList) {
+                transfBody.Find (nameElement)?.gameObject.SetActive (true);
+            }
+        }
+    }
+
+    public void SettingPerson (Person person, bool active) {
+        if (!active) {
+            SettingPerson (person);
+            return;
+        }
+        PersonMatchManager.instance.MatchData.DisablePresetParts (person);
+        var transfBody = person.transform.GetChild (0);
 
         foreach (var item in Elements) {
             var entity = item.GetEntity ();
