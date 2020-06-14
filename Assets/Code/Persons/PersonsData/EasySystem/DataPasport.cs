@@ -20,7 +20,8 @@ public class DataPasport : IPersonVisual {
 
     private bool MatchEntity (DataEntity entity, DataEntity[] entities) {
         foreach (var item in entities) {
-            if (item.EntitiesNames[0].Equals (entity.EntitiesNames[0])) {
+            if (item.EntitiesNames[0].Equals (entity.EntitiesNames[0]) ||
+                (item.EntitiesNames[0].StartsWith ("hair") && entity.EntitiesNames[0].StartsWith ("hair") && int.Parse (item.EntitiesNames[0].Remove (0, 5)) % 4 == int.Parse (entity.EntitiesNames[0].Remove (0, 5)) % 4)) {
                 return true;
             }
         }
