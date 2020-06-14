@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update () {
+        if (PersonMatchManager.instance == null) return;
 
         if (Input.GetMouseButtonDown (0))
             PersonMatchManager.Match (true);
