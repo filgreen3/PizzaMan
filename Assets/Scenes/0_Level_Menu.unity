@@ -3561,10 +3561,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8535853720867699758, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535853720867699758, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535853720878765742, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8535853720878948764, guid: 1398e6088aa1df547b7827ca2da8bf29,
         type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535853720878953070, guid: 1398e6088aa1df547b7827ca2da8bf29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9088214128360907188, guid: 1398e6088aa1df547b7827ca2da8bf29,
         type: 3}
@@ -6393,6 +6413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290002167, guid: 7ac824eeffb3df544abaf1f1f6c7ae22, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2457855142152440421, guid: 7ac824eeffb3df544abaf1f1f6c7ae22,
         type: 3}
       propertyPath: m_LocalPosition.x
