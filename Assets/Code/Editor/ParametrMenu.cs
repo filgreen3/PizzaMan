@@ -20,7 +20,7 @@ public class ParametrMenu : VisualElement {
     private DataEntityCollection entityCollection;
     private VisualElement menuBox;
 
-    public ParametrMenu (Menu_Editor baseEditor) {
+    public ParametrMenu (MenuEditor baseEditor) {
         entityCollection = AssetDatabase.LoadAssetAtPath<DataEntityCollection> (dataEntityPath + "Data.asset");
 
         var dataBaseField = new ObjectField ();
@@ -73,26 +73,6 @@ public class ParametrMenu : VisualElement {
         Debug.Log ($"Removed copy: {listBeforeCount-list.Count}");
         listBeforeCount = list.Count;
 
-        /*   for (int i = list.Count - 1; i >= 0; i--) {
-               var name = list[i].name;
-
-               DataEntity entityItem = null;
-               foreach (var entity in entityCollection.Collection) {
-
-                   if (entity.Key != null && name.StartsWith (entity.Key)) {
-                       entityItem = entity;
-                       break;
-                   }
-               }
-
-               if (entityItem != null) {
-                   entityItem.AddNames (name);
-                   list.RemoveAt (i);
-               }
-           }
-           Debug.Log ($"Add subname: {listBeforeCount-list.Count}");
-           listBeforeCount = list.Count;
-           */
 
         var entitylist = new List<DataEntity> ();
         foreach (var item in list) {

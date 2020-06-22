@@ -11,14 +11,16 @@
 
 .area {
     position: absolute;
-    top: 40px;
-    left: 0px;
-    bottom: 0px;
+    top: 5px;
+    left: 5px;
+    bottom: 310px;
     right: 0;
     width:235px;
+    opacity: 0.77;
     background-color: silver;
-    border-width: 5px;
-    border-color: gainsboro;
+    border-width: 1px;
+    border-color: DarkGrey;
+
 }
 
 .droparea:hover {
