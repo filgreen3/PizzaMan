@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e41f0c8452a58e140831a69946d464eb, type: 3}
-  m_Name: StandartPerson 1
+  m_Script: {fileID: 11500000, guid: 7d58c52efc760f54d98b2e2b3a376782, type: 3}
+  m_Name: l_rukav_4
   m_EditorClassIdentifier: 
-  IncludeParametr: {fileID: 11400000, guid: db805b495e8b4e34881e6c48a5ee04d0, type: 2}
-  Parametrs:
-  - {fileID: 11400000, guid: 5408b6a8cd2a3d5439d755893857bab6, type: 2}
+  lastIndex: 0
+  Icon: {fileID: 0}
+  NamesItem:
+  - l_rukav_4

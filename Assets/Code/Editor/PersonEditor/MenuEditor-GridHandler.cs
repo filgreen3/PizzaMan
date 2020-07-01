@@ -7,11 +7,12 @@ using UnityEngine.UIElements;
 
 public partial class MenuEditor : EditorWindow
 {
+    public static MenuEditor CurrentWindow;
+
+    public ParametrMenu WindowParametrMenu;
 
     public Vector2 offset;
     public Vector2 drag;
-
-    public VisualElement root;
 
     public Node node;
 
@@ -21,26 +22,39 @@ public partial class MenuEditor : EditorWindow
         MenuEditor window = GetWindow<MenuEditor>();
         window.minSize = new Vector2(450, 450);
         window.titleContent = new GUIContent("Editor");
-
+        window.rootVisualElement.style.backgroundColor = Color.gray;
+        window.rootVisualElement.style.color = Color.gray;
     }
 
     public void OnEnable()
     {
-        root = rootVisualElement;
+        CurrentWindow = this;
+        var root = rootVisualElement;
         root.styleSheets.Add(AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Code/Editor/dnd.uss"));
 
-        var area = new ParametrMenu(this);
-        area.AddToClassList("area");
-        root.Add(area);
+        var presetSave = new PresetFormer();
+        presetSave.AddToClassList("box");
+        root.Add(presetSave);
+
+        WindowParametrMenu = new ParametrMenu(this);
+        WindowParametrMenu.AddToClassList("area");
+        root.Add(WindowParametrMenu);
+
     }
+
 
 
     private void OnGUI()
     {
 
-        DrawGrid(100, 0.5f, Color.grey);
-        DrawGrid(20, 0.2f, Color.grey);
+        DrawGrid(100, 0.5f, Color.gray);
+        DrawGrid(20, 0.2f, Color.gray);
 
+
+        for (int i = 0; i < Links.Count; i++)
+        {
+            Links[i].Draw();
+        }
         ProcessEvents(Event.current);
 
         if (GUI.changed) Repaint();

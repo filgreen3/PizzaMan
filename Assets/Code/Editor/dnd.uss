@@ -4,14 +4,14 @@
     left: 240px;
     bottom: 0px;
     right: 0px;
-    background-color: gainsboro;
+    background-color: silver;
     border-width: 5px;
     border-color: gainsboro;
 }
 
 .area {
     position: absolute;
-    top: 5px;
+    top: 30px;
     left: 5px;
     bottom: 310px;
     right: 0;
@@ -21,6 +21,18 @@
     border-width: 1px;
     border-color: DarkGrey;
 
+}
+
+.nodearea {
+    position: absolute;
+    opacity: 0.9;
+    background-color: lightgray;
+    border-width: 1px;
+    border-color: DarkGrey;
+}
+
+.nodearea:hover {
+ background-color: rgb(213, 213, 213);
 }
 
 .droparea:hover {
@@ -38,15 +50,69 @@ Label {
     border-color: red;
 }
 
-.box {
+.buttonout {
     position: absolute;
-    width: 128px;
-    height: 32px;
-    background-color: grey;
+    width: 15px;
+    height: 15px;
+    left: 222px;
+    top:2px;
+    background-color: rgb(170, 190, 253);
     color: antiquewhite;
     white-space: normal;
     border-width: 1px;
-    border-color: orange;
+    border-color: DarkGrey;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+
+.buttonin {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -11px;
+    top:0px;
+    background-color: rgb(253, 190, 170);
+    color: antiquewhite;
+    white-space: normal;
+    border-width: 1px;
+    border-color: DarkGrey;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.box {
+    height:25px;
+    background-color: lightgray;
+    color: black;
+    white-space: normal;
+    border-width: 1px;
+    border-color: DarkGrey;
+}
+
+.exit {
+    position: absolute;
+    width: 15px;
+    height: 12px;
+    left: 226px;
+    top:-1px;
+    background-color: silver;
+    color: black;
+    white-space: normal;
+    border-width: 0px;
+    border-color: DarkGrey;
+    padding-bottom: 15px;
+}
+.exit:hover {
+    background-color: azure;
+}
+
+
+
+
 
 

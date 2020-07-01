@@ -7,6 +7,21 @@ using UnityEngine.UIElements;
 
 public partial class MenuEditor : EditorWindow
 {
+
+    public IEventHandler pointer;
+
+
+    private void OnElementOver(MouseOverEvent e)
+    {
+        pointer = e.currentTarget;
+    }
+
+    private void OnElementOut(MouseOutEvent e)
+    {
+        pointer = null;
+    }
+
+
     private void ProcessEvents(Event e)
     {
         drag = Vector2.zero;
@@ -16,14 +31,11 @@ public partial class MenuEditor : EditorWindow
             case EventType.MouseDown:
                 if (e.button == 0)
                 {
-
                     //ClearConnectionSelection();
                 }
 
                 if (e.button == 1)
                 {
-
-
                     ProcessContextMenu(e.mousePosition);
                 }
                 break;
@@ -39,15 +51,19 @@ public partial class MenuEditor : EditorWindow
 
     private void OnDrag(Vector2 delta)
     {
-        drag = delta;
-
-        if (Nodes != null)
+        if (pointer == null)
         {
-            for (int i = 0; i < Nodes.Count; i++)
+            drag = delta;
+
+            if (Nodes != null)
             {
-                Nodes[i].UpdateRect(drag);
+                for (int i = 0; i < Nodes.Count; i++)
+                {
+                    Nodes[i].UpdateRect(delta);
+                }
             }
         }
+        (pointer as Node)?.UpdateRect(delta);
         GUI.changed = true;
     }
 
@@ -56,19 +72,30 @@ public partial class MenuEditor : EditorWindow
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Add node"), false, () =>
         {
-            node = new BoxNode();
-
-            var size = new Vector2(100, 75);
-            node.style.width = size.x;
-            node.style.height = size.y;
-            node.style.opacity = 1f;
-            node.style.backgroundColor = Color.grey;
-
-
-            node.transform.position = mousePosition - size / 2f;
-            node.AddToClassList("area");
+            node = new ParamNode();
+            node.style.width = 250;
+            node.transform.position = mousePosition - Vector2.right * 250 / 2f;
+            node.AddToClassList("nodearea");
             AddNode(node);
         });
         genericMenu.ShowAsContext();
     }
+
+    void OnDragPerformEvent(DragPerformEvent e)
+    {
+        DragAndDrop.AcceptDrag();
+
+        object draggedObject = DragAndDrop.GetGenericData("BoxNode");
+
+        var newBox = new ParamNode();
+        var size = new Vector2(100, 75);
+        newBox.style.width = size.x;
+        newBox.style.height = size.y;
+
+        newBox.transform.position = e.mousePosition - size / 2f;
+        AddNode(newBox);
+
+    }
+
 }
+
