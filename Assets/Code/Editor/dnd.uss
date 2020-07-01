@@ -107,6 +107,19 @@ Label {
     border-color: DarkGrey;
     padding-bottom: 15px;
 }
+.smallbutton {
+    width: 15px;
+    height: 12px;
+    left: 226px;
+    top:-1px;
+    background-color: silver;
+    color: black;
+    white-space: normal;
+    border-width: 0px;
+    border-color: DarkGrey;
+    padding-bottom: 15px;
+}
+
 .exit:hover {
     background-color: azure;
 }
