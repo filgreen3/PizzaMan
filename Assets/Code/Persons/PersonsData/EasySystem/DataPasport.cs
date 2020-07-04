@@ -3,60 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[SerializeField]
-public class DataPasport : IPersonVisual {
-    [Space (6)] public List<DataEntity> Elements = new List<DataEntity> ();
+[System.Serializable, SerializeField]
+public class DataPasport : IPersonVisual
+{
+    [Space(6)] public List<Sprite> Elements = new List<Sprite>();
+    [Space(6)] public List<DataEntity> entities = new List<DataEntity>();
 
-    public DataEntity[] Entities => Elements.ToArray ();
+    public Sprite[] Entities => Elements.ToArray();
 
-    public bool Match (IPersonVisual person) {
-        foreach (var baseEntity in Elements) {
-            if (!MatchEntity (baseEntity, person.Entities))
-                return false;
-        }
-        return true;
+    public void AddEntity(DataEntity entity)
+    {
+        Elements.Add(entity.Icon);
+        entities.Add(entity);
     }
 
-    private bool MatchEntity (DataEntity entity, DataEntity[] entities) {
-        foreach (var item in entities) {
-            if (item.EntitiesNames[0].Equals (entity.EntitiesNames[0]) ||
-                (item.EntitiesNames[0].StartsWith ("hair") && entity.EntitiesNames[0].StartsWith ("hair") && int.Parse (item.EntitiesNames[0].Remove (0, 5)) % 4 == int.Parse (entity.EntitiesNames[0].Remove (0, 5)) % 4)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    public int Match(IPersonVisual person)
+    {
+        var list1 = Entities;
+        var list2 = person.Entities;
 
-    public void SettingPerson (Person person) {
-        var transfBody = person.transform.GetChild (0);
+        var count = list1.Intersect(list2).Count();
+        Debug.Log(count);
 
-        for (int i = 0; i < transfBody.childCount; i++) {
-            transfBody.GetChild (i).gameObject.SetActive (false);
-        }
-
-        foreach (var item in Elements) {
-            var entity = item.GetEntity ();
-            var entityNamesList = entity.EntitiesNames;
-            foreach (var nameElement in entityNamesList) {
-                transfBody.Find (nameElement)?.gameObject.SetActive (true);
-            }
-        }
-    }
-
-    public void SettingPerson (Person person, bool active) {
-        if (!active) {
-            SettingPerson (person);
-            return;
-        }
-        PersonMatchManager.instance.MatchData.DisablePresetParts (person);
-        var transfBody = person.transform.GetChild (0);
-
-        foreach (var item in Elements) {
-            var entity = item.GetEntity ();
-            var entityNamesList = entity.EntitiesNames;
-            foreach (var nameElement in entityNamesList) {
-                transfBody.Find (nameElement)?.gameObject.SetActive (true);
-            }
-        }
+        return count;
     }
 }

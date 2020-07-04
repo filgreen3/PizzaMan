@@ -3652,7 +3652,7 @@ PrefabInstance:
     - target: {fileID: 516964383579845697, guid: dd3c42a3503dd924a8f6205922144385,
         type: 3}
       propertyPath: _flipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 516964383579845697, guid: dd3c42a3503dd924a8f6205922144385,
         type: 3}
@@ -3784,6 +3784,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7309701039237858243, guid: dd3c42a3503dd924a8f6205922144385,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309701039237858243, guid: dd3c42a3503dd924a8f6205922144385,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7418284551065786507, guid: dd3c42a3503dd924a8f6205922144385,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3813,6 +3823,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418284551065786507, guid: dd3c42a3503dd924a8f6205922144385,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418284551065786507, guid: dd3c42a3503dd924a8f6205922144385,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7966072648821249260, guid: dd3c42a3503dd924a8f6205922144385,
         type: 3}
@@ -7366,14 +7386,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3025f5e71d8d224ea2aa964dbe5d962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MatchData: {fileID: 11400000, guid: dda8d15a358830043a667b21fd4cb67c, type: 2}
+  MatchPasportGood:
+    Elements: []
+    entities: []
+  MatchPasportBad:
+    Elements: []
+    entities: []
   badpanel: {fileID: 24433184}
+  GoodLibrary:
+  - Lable: Wear
+    libraries: []
+  BadLibrary:
+  - Lable: Wear
+    libraries: []
   Win: {fileID: 8300000, guid: 8e3430b66f056a54eac97662fd0d8a6f, type: 3}
   Loose: {fileID: 8300000, guid: 9fd7ba4d937866445ac142421b4821b6, type: 3}
   endless: 0
   scoreManager: {fileID: 6465630543607377924}
   playerMouse: {fileID: 367524072}
   PersonTransforms: []
+  matcherIdgood: 0
+  matcherIdbad: 0
 --- !u!114 &1747167143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7387,11 +7420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PersonPrefab:
-  - {fileID: 6794424484845150886, guid: 7cf776177d944e94fb408e0317eda117, type: 3}
-  - {fileID: 6794424484845150886, guid: 8956b19f3557d4243a7561032a445de1, type: 3}
-  Preset:
-  - {fileID: 11400000, guid: 99d3b3ad2fd211549b2b5dad21086007, type: 2}
-  - {fileID: 11400000, guid: 0bc2fe342dd47954f81664b535062a32, type: 2}
+  - {fileID: 3693606947379692856, guid: c55b2a743339368478628ecd81b0ea21, type: 3}
+  - {fileID: 6838404746706725812, guid: 89eece7601a8aa44692d09bd231d8347, type: 3}
 --- !u!114 &1747167144
 MonoBehaviour:
   m_ObjectHideFlags: 0

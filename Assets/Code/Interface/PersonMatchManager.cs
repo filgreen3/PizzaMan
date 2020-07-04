@@ -4,13 +4,14 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PersonMatchManager : MonoBehaviour {
-
-    public PersonPreset MatchData;
-
+public class PersonMatchManager : MonoBehaviour
+{
     public DataPasport MatchPasportGood;
     public DataPasport MatchPasportBad;
     public GameObject badpanel;
+
+    public LibraryContainer[] GoodLibrary;
+    public LibraryContainer[] BadLibrary;
 
     AudioSource audio;
     public AudioClip Win;
@@ -19,96 +20,173 @@ public class PersonMatchManager : MonoBehaviour {
     public Score scoreManager;
 
     [SerializeField] private Transform playerMouse;
-
     [HideInInspector] public Person[] PersonTransforms;
+
+    public int matcherIdgood;
+    public int matcherIdbad;
+
 
     public static PersonMatchManager instance;
 
-    private void Start () {
+    private void Start()
+    {
         instance = this;
-        MatchData.SortParametrs ();
 
-        UpdateMatcher (true);
-        UpdateMatcher (false);
-        audio = GetComponent<AudioSource> ();
+        UpdateMatcher(true);
+        UpdateMatcher(false);
+        audio = GetComponent<AudioSource>();
     }
 
-    public static void MatchPerson (Person person, bool isGood) {
+    public void LoadTruePerson(bool isGood, ref PersonEasy person)
+    {
+        if (person.matchId == (isGood ? matcherIdgood : matcherIdbad))
+        {
+            var list1 = isGood ? GoodLibrary[matcherIdgood].libraries.SelectMany(item => item.GetAllNames).ToArray() : BadLibrary[matcherIdbad].libraries.SelectMany(item => item.GetAllNames).ToArray();
 
-        if (isGood) {
-            if (instance.MatchPasportGood.Match (person.Data)) {
-                Debug.Log ("Good!");
-                if (instance.endless) { instance.scoreManager.FlyersGood++; instance.scoreManager.time += 20; } else instance.scoreManager.FlyersGood--;
-                instance.UpdateMatcher (true);
-                instance.audio.PlayOneShot (instance.Win);
-            } else {
-                Debug.Log ("Bad!");
-                instance.scoreManager.lossesGood++;
-                instance.UpdateMatcher (true);
-                instance.audio.PlayOneShot (instance.Loose);
+            var trueEntity = isGood ? MatchPasportGood.entities : MatchPasportBad.entities;
+            var list2 = trueEntity.SelectMany(item => item.NamesItem).ToArray();
+
+
+            person.MySetting(list1, list2);
+            foreach (var item in trueEntity)
+            {
+                person.pasport.Elements.Add(item.Icon);
             }
-        } else {
-            if (instance.MatchPasportBad.Match (person.Data)) {
-                Debug.Log ("Good!");
-                if (instance.badpanel.activeSelf) {
-                    if (instance.endless) { instance.scoreManager.FlyersBad++; instance.scoreManager.time += 20; } else instance.scoreManager.FlyersBad--;
-                    instance.UpdateMatcher (false);
-                    instance.audio.PlayOneShot (instance.Win);
+        }
+    }
+
+    void GetMatcher(bool isGood, ref DataPasport personVisual)
+    {
+        int id = 0;
+        Library[] list = null;
+
+        if (isGood)
+        {
+            matcherIdgood = Random.Range(0, 2);
+            list = GoodLibrary[matcherIdgood].libraries;
+        }
+        else
+        {
+            matcherIdbad = Random.Range(0, 2);
+            list = BadLibrary[matcherIdbad].libraries;
+        }
+        foreach (var item in list)
+        {
+            item.GetNames(ref id, ref personVisual);
+        }
+    }
+
+
+
+    public void MatchPerson(Person person, bool isGood)
+    {
+        if (isGood)
+        {
+            if (MatchPasportGood.Match(person.pasport) >= GoodLibrary[matcherIdgood].libraries.Length)
+            {
+                Debug.Log("Yes!");
+                if (endless) { scoreManager.FlyersGood++; scoreManager.time += 20; } else scoreManager.FlyersGood--;
+                UpdateMatcher(true);
+                audio.PlayOneShot(Win);
+            }
+            else
+            {
+                Debug.Log("No!");
+                scoreManager.lossesGood++;
+                UpdateMatcher(true);
+                audio.PlayOneShot(Loose);
+            }
+        }
+        else
+        {
+            if (MatchPasportBad.Match(person.pasport) >= BadLibrary[matcherIdbad].libraries.Length)
+            {
+                Debug.Log("Yes!");
+                if (badpanel.activeSelf)
+                {
+                    if (endless) { scoreManager.FlyersBad++; scoreManager.time += 20; } else scoreManager.FlyersBad--;
+                    UpdateMatcher(false);
+                    audio.PlayOneShot(Win);
                 }
-            } else {
-                Debug.Log ("Bad!");
-                if (instance.badpanel.activeSelf) {
-                    instance.scoreManager.lossesBad++;
-                    instance.UpdateMatcher (false);
-                    instance.audio.PlayOneShot (instance.Loose);
+            }
+            else
+            {
+                Debug.Log("No!");
+                if (badpanel.activeSelf)
+                {
+                    scoreManager.lossesBad++;
+                    UpdateMatcher(false);
+                    audio.PlayOneShot(Loose);
                 }
             }
         }
     }
 
-    public void UpdateMatcher (bool isGood) {
-        if (isGood) {
-            instance.MatchPasportGood = instance.MatchData.GetDataPasport ();
-            for (int i = 0; i < Mathf.Min (scoreManager.GoodParamsCount, MatchPasportGood.Elements.Count); i++) {
-                scoreManager.ImageCriteria[i].gameObject.SetActive (true);
-                scoreManager.ImageCriteria[i].transform.GetChild (0).GetComponent<Image> ().sprite =
-                    MatchPasportGood.Elements[i].Icon;
+    public void UpdateMatcher(bool isGood)
+    {
+        if (isGood)
+        {
+            MatchPasportGood = new DataPasport();
+            instance.GetMatcher(true, ref MatchPasportGood);
+            for (int i = 0; i < Mathf.Min(scoreManager.GoodParamsCount, MatchPasportGood.Elements.Count); i++)
+            {
+                scoreManager.ImageCriteria[i].gameObject.SetActive(true);
+                scoreManager.ImageCriteria[i].transform.GetChild(0).GetComponent<Image>().sprite =
+                    MatchPasportGood.Elements[i];
             }
-        } else {
-            instance.MatchPasportBad = instance.MatchData.GetDataPasport ();
-            for (int i = 0; i < Mathf.Min (scoreManager.BadParamsCount, MatchPasportBad.Elements.Count); i++) {
-                scoreManager.ImageCriteria[i + 3].gameObject.SetActive (true);
-                scoreManager.ImageCriteria[i + 3].transform.GetChild (0).GetComponent<Image> ().sprite =
-                    MatchPasportBad.Elements[i].Icon;
+        }
+        else
+        {
+            MatchPasportBad = new DataPasport();
+            instance.GetMatcher(false, ref MatchPasportBad);
+            for (int i = 0; i < Mathf.Min(scoreManager.BadParamsCount, MatchPasportBad.Elements.Count); i++)
+            {
+                scoreManager.ImageCriteria[i + 3].gameObject.SetActive(true);
+                scoreManager.ImageCriteria[i + 3].transform.GetChild(0).GetComponent<Image>().sprite =
+                    MatchPasportBad.Elements[i];
             }
         }
     }
 
-    public static void Match (bool isGood) {
+    public static void Match(bool isGood)
+    {
         if (Time.timeScale <= 0) return;
         Vector2 dist;
         var list = instance.PersonTransforms.
-        Where (item => {
+        Where(item =>
+        {
             dist = (item.transform.position - instance.playerMouse.position);
             return dist.magnitude < 2f;
-        }).ToArray ();
+        }).ToArray();
 
-        Debug.Log (list.Length);
+        Debug.Log(list.Length);
 
-        foreach (var item in list) {
-            if (isGood) {
-                if (instance.MatchPasportGood.Match (item.Data)) {
-                    MatchPerson (item, isGood);
+        foreach (var item in list)
+        {
+            if (isGood)
+            {
+                if (instance.MatchPasportGood.Match(item.pasport) >= instance.scoreManager.GoodParamsCount)
+                {
+                    instance.MatchPerson(item, isGood);
                     return;
                 }
-            } else {
-                if (instance.MatchPasportBad.Match (item.Data)) {
-                    MatchPerson (item, isGood);
+            }
+            else
+            {
+                if (instance.MatchPasportBad.Match(item.pasport) >= instance.scoreManager.BadParamsCount)
+                {
+                    instance.MatchPerson(item, isGood);
                     return;
                 }
             }
         }
         if (list.Length > 0)
-            MatchPerson (list[0], isGood);
+            instance.MatchPerson(list[0], isGood);
     }
+}
+[System.Serializable]
+public class LibraryContainer
+{
+    public string Lable;
+    public Library[] libraries;
 }
