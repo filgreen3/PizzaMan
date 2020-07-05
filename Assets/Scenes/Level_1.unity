@@ -7430,6 +7430,14 @@ MonoBehaviour:
       - {fileID: 11400000, guid: fbb017090c5b7c8418062514a3176b3d, type: 2}
       - {fileID: 11400000, guid: 088ec27e74d264645ace90954053e0e8, type: 2}
       - {fileID: 11400000, guid: f79dfcefbfad6dc4994242fe5b2905b8, type: 2}
+    - Lable: Leg
+      usePrev: 0
+      Weight: 0
+      Datas:
+      - {fileID: 11400000, guid: 34f754e71598f114aadd76b0faa41831, type: 2}
+      - {fileID: 11400000, guid: 94ec942aeed2e524485b14f5c50e7634, type: 2}
+      - {fileID: 11400000, guid: 05d7e2135896e584eae2189fa2d830be, type: 2}
+      - {fileID: 11400000, guid: d4089bae5a6de434e90120b367d2998b, type: 2}
   - Lable: GLIb
     libraries:
     - Lable: Wear
@@ -7466,6 +7474,14 @@ MonoBehaviour:
       - {fileID: 11400000, guid: e8d59d26df2ecba4f9b9ad74222aa6c8, type: 2}
       - {fileID: 11400000, guid: df6b584fdf86fd9439178520fc1cc977, type: 2}
       - {fileID: 11400000, guid: 736c192f257c95e4ead8ffdcceaad508, type: 2}
+    - Lable: Leg
+      usePrev: 0
+      Weight: 0
+      Datas:
+      - {fileID: 11400000, guid: e4eaa328cb953294bbccba1d29b73318, type: 2}
+      - {fileID: 11400000, guid: 251c8155cfb4bd0458cf886f2bccbd1d, type: 2}
+      - {fileID: 11400000, guid: 2f04682bd03372b4a828efda8bb72ebc, type: 2}
+      - {fileID: 11400000, guid: 30451af9f9aa95e4bbf2451003412c19, type: 2}
   BadLibrary:
   - Lable: Wear
     libraries: []
