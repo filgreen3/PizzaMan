@@ -28,6 +28,13 @@ public class PersonMatchManager : MonoBehaviour
 
     public static PersonMatchManager instance;
 
+
+    [ContextMenu("CopyLibs")]
+    public void CopyLibrarys()
+    {
+        BadLibrary = (LibraryContainer[])GoodLibrary.Clone();
+    }
+
     private void Start()
     {
         instance = this;

@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class PersonFabric : MonoBehaviour
 {
-
     public Person[] PersonPrefab;
-
-
-    public Person CreatePerson(Vector3 position)
+    public Person CreatePerson(Vector3 position, int id)
     {
-        var id = Random.Range(0, PersonPrefab.Length);
         var person = Instantiate(PersonPrefab[id], position, Quaternion.identity);
         person.Dir = Vector2.right * -Mathf.Sign(Random.value - 0.5f);
         return person;

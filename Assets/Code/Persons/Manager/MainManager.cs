@@ -24,7 +24,7 @@ public class MainManager : MonoBehaviour
         for (int i = 0; i < PeopleCount; i++)
         {
             var point = Vector3.right * SizeX * 0.5f * Mathf.Sign(Random.value - 0.5f);
-            var person = fabric.CreatePerson(point);
+            var person = fabric.CreatePerson(point, i % 2);
             person.Speed = Speed;
             person.mainLine = mainLine;
             person.delta = delta;
