@@ -24,7 +24,7 @@ public class MainManager : MonoBehaviour
         for (int i = 0; i < PeopleCount; i++)
         {
             var point = Vector3.right * SizeX * 0.5f * Mathf.Sign(Random.value - 0.5f);
-            var person = fabric.CreatePerson(point, i % 2);
+            var person = fabric.CreatePerson(point, i % 4);
             person.Speed = Speed;
             person.mainLine = mainLine;
             person.delta = delta;
@@ -42,7 +42,7 @@ public class MainManager : MonoBehaviour
 
     IEnumerator GameLoop()
     {
-        var waiter = new WaitForSeconds(1f);
+        var waiter = new WaitForSeconds(10f);
 
         while (true)
         {
