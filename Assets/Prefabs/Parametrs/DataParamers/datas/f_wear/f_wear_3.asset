@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: f_wear_3
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 21300000, guid: 86464bd18b25fde49b0327b312996aa2, type: 3}
+  Icon: {fileID: 21300000, guid: 95051d18ca6f84f4a81c747fcb1758d3, type: 3}
   NamesItem:
   - wear_3

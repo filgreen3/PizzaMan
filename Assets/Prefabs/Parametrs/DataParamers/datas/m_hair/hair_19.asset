@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: hair_19
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 21300000, guid: 0e887376757d7564aab508276db16663, type: 3}
+  Icon: {fileID: 21300000, guid: 6d90285cadd863449be1283d3c2c0e54, type: 3}
   NamesItem:
   - hair_19
