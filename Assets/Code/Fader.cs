@@ -8,7 +8,7 @@ public class Fader : MonoBehaviour
 {
     bool faded = false;
     Image Image;
-    float t = 1;
+    float t = 1.5f;
     public int next;
     private void Start()
     {
