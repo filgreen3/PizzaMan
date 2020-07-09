@@ -57,7 +57,7 @@ public class PersonEasy : Person
     protected override void OnRebuild()
     {
         var mine = this;
-        PersonMatchManager.instance.LoadTruePerson(true, ref mine);
+        PersonMatchManager.instance.LoadTruePerson(Random.value > 0.3f, ref mine);
     }
 }
 
