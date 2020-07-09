@@ -176,6 +176,13 @@ MonoBehaviour:
     Datas:
     - {fileID: 11400000, guid: 9b31f4bc9978e0e4ea2a41707f8c5a3f, type: 2}
     - {fileID: 11400000, guid: fa85244ecf6e31746a88b242f8085bab, type: 2}
+  - Lable: Extra
+    usePrev: 0
+    Weight: 0.9
+    Datas:
+    - {fileID: 11400000, guid: 16abdce2ea1f38e4185e6d74e5f24d2c, type: 2}
+    - {fileID: 11400000, guid: 0f611d1f2aa649640968b3238f9af707, type: 2}
+    - {fileID: 11400000, guid: 2c9d71c643010184797e095a0bfe9527, type: 2}
   AllOn:
   - rost
   - ten
@@ -741,7 +748,7 @@ PrefabInstance:
     - target: {fileID: 995776263690834971, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.88
+      value: 0.15315092
       objectReference: {fileID: 0}
     - target: {fileID: 995776263690834971, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
@@ -1311,7 +1318,7 @@ PrefabInstance:
     - target: {fileID: 1968781342415106877, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.02
+      value: 0.33195022
       objectReference: {fileID: 0}
     - target: {fileID: 1968781342415106877, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
@@ -2296,7 +2303,7 @@ PrefabInstance:
     - target: {fileID: 3956875826606575828, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.41
+      value: 0.15315092
       objectReference: {fileID: 0}
     - target: {fileID: 3956875826606575828, guid: b5194977f291b2a4d9d83126f12e1500,
         type: 3}
