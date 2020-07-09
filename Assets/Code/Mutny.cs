@@ -6,6 +6,7 @@ public class Mutny : MonoBehaviour
 {
     bool activated = false;
     public GameObject Enable;
+    public float speed = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player"&&!activated) { 
@@ -15,6 +16,6 @@ public class Mutny : MonoBehaviour
     }
     void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime / 2;
+        transform.position += Vector3.left * speed*Time.deltaTime / 2;
     }
 }

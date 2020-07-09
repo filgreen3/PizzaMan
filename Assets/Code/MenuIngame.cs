@@ -46,6 +46,7 @@ public class MenuIngame : MonoBehaviour
     public void Endless3(GameObject New)
     {
         New.SetActive(false);
+        EndlessGame = null;
 }    
     public void New()
     {
@@ -104,7 +105,7 @@ public class MenuIngame : MonoBehaviour
                 Continue.GetComponent<Button>().interactable = true;
                 Continue.GetComponent<Image>().color = Color.white;
             }
-            if (PlayerPrefs.GetInt("Level") > 6)
+            if (PlayerPrefs.GetInt("Level") > 4)
             {
                 EndlessGame.GetComponent<Button>().interactable = true;
                 EndlessGame.GetComponent<Image>().color = Color.white;
