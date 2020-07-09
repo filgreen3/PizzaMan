@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: leg_4_tr
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 21300000, guid: 2708de60ea742db4385df300f7941cf3, type: 3}
+  Icon: {fileID: 21300000, guid: 1282682b5e079fe499cf1951889bb8d1, type: 3}
   NamesItem:
-  - leg up_4_tr1
-  - leg up_4_tr
-  - leg down_tr_41
-  - leg down_tr_4
-  - shtani_2
+  - leg up_3_tr1
+  - leg up_3_tr
+  - leg down_tr_21
+  - leg down_tr_2
+  - shtani_4
