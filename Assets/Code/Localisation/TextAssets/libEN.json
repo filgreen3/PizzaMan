@@ -46,7 +46,9 @@
 { "key":"43", "value":"And I found a tooth and some nails, is that alright?"},
 { "key":"44", "value":"Alright, alright. You don’t wanna know what I’d found in my pizza. Anyway, let’s sum up, now you work for me and you do everything I say."},
 { "key":"45", "value":"You are to hand out flyers and to attract customers. I’ll give you a limited number of flyers a day. According to my experience, a special kind of people will buy it and come."},
-{ "key":"46", "value":"You’ll see who you should flog it. And don’t worry; you’ll HEAR if something changes. So don’t waste your flyers on a wrong person. 3 mistakes and you’re fired. And don’t be a bum, hand them ALL out before the pizzeria closes."},
+{ "key":"46", "value":"You’ll see who you should flog it. And don’t worry; you’ll SEE if something changes. So don’t waste your flyers on a wrong person."},
+{ "key":"46_1", "value":"3 mistakes and you’re fired. And don’t be a bum, hand them ALL out before the pizzeria closes."},
+
 { "key":"47", "value":"Use the keys W, S, A, D to move! I didn't hire you to be wallflowers!"},
 { "key":"48", "value":"Left-click on a passerby to give a flyer! Now try to give it to anybody."},
 { "key":"49", "value":"Excellent! You’ve learnt it all, now get to work. Don’t go too far at first."},

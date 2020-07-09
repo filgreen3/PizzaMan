@@ -13,7 +13,7 @@ public class PersonMatchManager : MonoBehaviour
     public LibraryContainer[] GoodLibrary;
     public LibraryContainer[] BadLibrary;
 
-    AudioSource audio;
+    public AudioSource audio;
     public AudioClip Win;
     public AudioClip Loose;
     public bool endless = false;
