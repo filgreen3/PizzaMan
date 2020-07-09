@@ -69,12 +69,12 @@ public class PersonMatchManager : MonoBehaviour
 
         if (isGood)
         {
-            matcherIdgood = Random.Range(0, 2);
+            matcherIdgood = Random.Range(0, 4);
             list = GoodLibrary[matcherIdgood].libraries;
         }
         else
         {
-            matcherIdbad = Random.Range(0, 2);
+            matcherIdbad = Random.Range(0, 4);
             list = BadLibrary[matcherIdbad].libraries;
         }
         foreach (var item in list)
@@ -85,11 +85,11 @@ public class PersonMatchManager : MonoBehaviour
 
 
 
-    public void MatchPerson(Person person, bool isGood)
+    public void MatchPerson(bool truePass, bool isGood)
     {
         if (isGood)
         {
-            if (MatchPasportGood.Match(person.pasport) >= GoodLibrary[matcherIdgood].libraries.Length)
+            if (truePass)
             {
                 Debug.Log("Yes!");
                 if (endless) { scoreManager.FlyersGood++; scoreManager.time += 20; } else scoreManager.FlyersGood--;
@@ -106,7 +106,7 @@ public class PersonMatchManager : MonoBehaviour
         }
         else
         {
-            if (MatchPasportBad.Match(person.pasport) >= BadLibrary[matcherIdbad].libraries.Length)
+            if (truePass)
             {
                 Debug.Log("Yes!");
                 if (badpanel.activeSelf)
@@ -166,7 +166,7 @@ public class PersonMatchManager : MonoBehaviour
             return dist.magnitude < 2f;
         }).ToArray();
 
-        Debug.Log(list.Length);
+        Debug.Log("People in check = " + list.Length);
 
         foreach (var item in list)
         {
@@ -174,7 +174,7 @@ public class PersonMatchManager : MonoBehaviour
             {
                 if (instance.MatchPasportGood.Match(item.pasport) >= instance.scoreManager.GoodParamsCount)
                 {
-                    instance.MatchPerson(item, isGood);
+                    instance.MatchPerson(true, isGood);
                     return;
                 }
             }
@@ -182,13 +182,13 @@ public class PersonMatchManager : MonoBehaviour
             {
                 if (instance.MatchPasportBad.Match(item.pasport) >= instance.scoreManager.BadParamsCount)
                 {
-                    instance.MatchPerson(item, isGood);
+                    instance.MatchPerson(true, isGood);
                     return;
                 }
             }
         }
         if (list.Length > 0)
-            instance.MatchPerson(list[0], isGood);
+            instance.MatchPerson(false, isGood);
     }
 }
 [System.Serializable]

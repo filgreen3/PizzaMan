@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wear_8
   m_EditorClassIdentifier: 
   lastIndex: 0
-  Icon: {fileID: 21300000, guid: f4fb03a3d3d97214fa8e0d383ec342d4, type: 3}
+  Icon: {fileID: 21300000, guid: 2ef8fe84d9ca5cb46bdf92ec21a872ac, type: 3}
   NamesItem:
   - wear_8
   - l_rukav_8

@@ -23,7 +23,7 @@ public class DataPasport : IPersonVisual
         var list2 = person.Entities;
 
         var count = list1.Intersect(list2).Count();
-        Debug.Log(count);
+        Debug.Log("Match count =" + count);
 
         return count;
     }

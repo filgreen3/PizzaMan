@@ -20,7 +20,7 @@ public class DataEntity : DataEntityGiver
     }
 
     public Sprite Icon;
-    public string[] NamesItem;
+    public string[] NamesItem = new string[0];
 
     public override int EntitiesCount => 1;
     public override string[] EntitiesNames => NamesItem;

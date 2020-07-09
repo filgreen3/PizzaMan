@@ -16,8 +16,6 @@ public class Library
 
         if (Random.value > Weight)
         {
-            Debug.Log(Lable);
-            Debug.Log(id);
             pasport.AddEntity(Datas[id]);
             return Datas[id].EntitiesNames;
         }
@@ -26,5 +24,11 @@ public class Library
             return new string[0];
         }
     }
-    public string[] GetAllNames => Datas.SelectMany(item => item.NamesItem).Distinct().ToArray();
+    public string[] GetAllNames
+    {
+        get
+        {
+            return Datas.SelectMany(item => item.NamesItem).Distinct().ToArray();
+        }
+    }
 }
