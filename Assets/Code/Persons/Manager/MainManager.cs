@@ -42,7 +42,7 @@ public class MainManager : MonoBehaviour
 
     IEnumerator GameLoop()
     {
-        var waiter = new WaitForSeconds(10f);
+        var waiter = new WaitForSeconds(5f);
 
         while (true)
         {
